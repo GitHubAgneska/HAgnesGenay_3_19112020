@@ -14,6 +14,19 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {} 
 
+/* 
+- Primaire:  #9356DC (violet)
+- Secondaire:#FF79DA (rose)
+- Tertiaire: #99E2D0 (turquoise)
+
+- gris dark: #353535 FOOTER
+- gris light: #f6f6f6  HOME => BG explore / how cards inactives /  BG results  + BG MENU 
+- gris light 2 : #eaeaea MOBILE => search bar
+
+- gris moyen #cbcbcb => BG BODY DESKTOP
+
+*/
+
 
 /* ================================== */
 /* ================================== */
@@ -77,7 +90,7 @@ body {
 }
 
 a { text-decoration: none; }
-input { border: transparent; }
+input { border: transparent; background-color: inherit; text-align: center;}
 ul { margin: 0; padding: 0;}
 ul li { list-style: none; }
 
@@ -97,6 +110,7 @@ header { height: 65px; background-color: #fff; margin-top: 0;}
     padding-top: 15px;
     display: block;
 }
+
 /* up to 1200  */
 @media only screen and (max-width: 1200px) {
     .header-logo-wrapper img { max-width: 170px;}
@@ -109,11 +123,15 @@ header { height: 65px; background-color: #fff; margin-top: 0;}
 
 
 
-/* ===  HOMEPAGE - SECTIONS MAIN RULES === */
+/* ===  HOMEPAGE -  MAIN SECTIONS COMMON RULES === */
 
 /* ANY DEVICE  ---- */
 
 /* all sections content */
+.explore-elements-wrapper,
+.results-section { background-color: #f6f6f6;  }
+.how-section { background-color: #fff;}
+
 .explore-elements-wrapper,
 .how-elements-wrapper,
 .results-elements-wrapper { 
@@ -126,7 +144,7 @@ header { height: 65px; background-color: #fff; margin-top: 0;}
 }
 
 .footer-nav-wrapper {  
-    margin-left: auto; margin-right: auto;
+    margin-left: auto; margin-right: auto; /* =====>>>>>>  */
     padding-top: 25px;}
 
 
@@ -136,13 +154,12 @@ header { height: 65px; background-color: #fff; margin-top: 0;}
     .explore-elements-wrapper,
     .how-elements-wrapper,
     .results-elements-wrapper { 
-
         margin-left: auto;margin-right: auto;  /* =====>>>>>>  */
         padding-top: 35px;
         padding-bottom:50px;
     }
     .how-elements-wrapper,
-    .results-elements-wrapper {  width: 90%; }
+    .results-elements-wrapper { width: 90%; }
     .explore-elements-wrapper * { margin-left: auto; margin-right: auto; /* =====>>>>>>  */
     }
     
@@ -155,15 +172,13 @@ header { height: 65px; background-color: #fff; margin-top: 0;}
 
 /* Extra large devices (large laptops and desktops, 1200px and up)  ---- */
 @media only screen and (min-width: 1200px) {
-    body { background-color: rgb(110, 109, 109);}
+    body { background-color: #cbcbcb;}
     .main-content-wrapper { 
-
-        
-        background-color: rgb(206, 206, 206); }
+        background-color: #f6f6f6; }
     .main-content-wrapper,
     .footer-nav-wrapper { width: 80%; 
         margin-left: auto;margin-right: auto;  /* =====>>>>>>  */ }
-        
+
     /* all sections content */
     .explore-elements-wrapper,
     .how-elements-wrapper,
@@ -181,43 +196,57 @@ header { height: 65px; background-color: #fff; margin-top: 0;}
 
 
 /* EXPLORE ===== */
-.explore-section { border:2px solid rgb(90, 252, 211);}
 
-.search-bar-wrapper { height: 50px; border:2px solid rgb(36, 119, 243);}
-/* .search-bar-wrapper .input-container > input[placeholder]{text-align: center; }
- */  
-@media only screen and (min-width: 1200px) {.search-bar-wrapper { width:60%; margin:auto;}}  
-.explore-elements-wrapper { background-color: rgb(186, 147, 196);
-        /*  height: 290px; */
-        text-align: center;
-        
-    }
+/* EXPLORE SECTION ELEMENTS --  ANY DEVICE  ---- */
+.explore-elements-wrapper { text-align: center; }
 
-/* EXPLORE MOBILE */
-.explore-elements-wrapper h1 { width: 230px;}
-.explore-elements-wrapper p { width: 300px;}
+/* search-bar any device */
+.search-bar-wrapper { height: 50px; background-color: #eaeaea;}
+/* .search-bar-wrapper .input-container > input[placeholder]{text-align: center; }*/
 
-.explore-btn-wrapper {margin-top:20px;margin-bottom:10px; }
+/* search-bar  DESKTOP */
+@media only screen and (min-width: 1200px) { 
+    .search-bar-wrapper { width:60%; margin:35px auto; } 
+}  
+
+/* btn */
+.explore-btn-wrapper { margin-top:20px;margin-bottom:10px; }
 .explore-btn-wrapper button { height:50px; display: block;}
 
-/* EXPLORE DESKTOP */
+
+/* EXPLORE MOBILE */
+/* up to 1200  ----  */
+@media only screen and (max-width: 1200px) {
+    .explore-elements-wrapper h1 { width: 230px;}
+    .explore-elements-wrapper p { width: 300px;}
+}
+
+
+/* EXPLORE DESKTOP  from 1200 */
 @media only screen and (min-width: 1200px) {
+
+    .explore-section { display: flex; flex-flow: column nowrap; }
+    .search-bar-wrapper { order:2; } /* search-bar goes below explore btn */
+
+    .explore-elements-wrapper { padding-bottom: 0;}
     .explore-elements-wrapper h1,
     .explore-elements-wrapper p { width: unset; } /* one-liners  */
 
     .explore-elements-wrapper h1 { margin-bottom: 0;}
     .explore-elements-wrapper p { margin-top: 0;}
 
+
 }
 
 
 
-/*  HOW SECTION ==== MOBILE  */
-.how-section { /* height: 440px; */ background-color: lightyellow;}
-.how-card {height: 75px; border:2px solid pink; }
+/*  HOW SECTION ==== Any device  */
+
+.how-card {height: 75px; border:2px solid pink; background-color: #f6f6f6;  }
 
 /*  HOW SECTION ==== DESKTOP  */
 @media only screen and (min-width: 1200px) {
+    .how-section { width: 95%; margin: auto; }
     .how-elements-wrapper { width: 50%; margin:auto;}
 
 }
@@ -239,7 +268,7 @@ header { height: 65px; background-color: #fff; margin-top: 0;}
 
 
 
-/* FOOTER =====  */
+/* FOOTER any device=====  */
 footer {
     height:195px;
     background-color: #000;
@@ -247,3 +276,11 @@ footer {
 .footer-logo-wrapper { margin: 0 0 1em 0;}
 .footer-logo-wrapper img { max-width: 100px;}
 .footer-nav-wrapper p { margin: .5em 0 0 0;  color:white;}
+
+/* FOOTER  ====== DESKTOP  */
+@media only screen and (min-width: 1200px) {
+
+    .footer-nav-wrapper ul
+    { display: flex; flex-flow: row nowrap;  justify-content: space-between; }
+
+}
