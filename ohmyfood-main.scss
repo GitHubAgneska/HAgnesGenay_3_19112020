@@ -73,7 +73,6 @@ html {
 }
 body { 
     margin: auto;
-    background-color: #fff;
     font-family:'Roboto-regular', Arial, Helvetica, sans-serif;
 }
 
@@ -105,19 +104,43 @@ header {  background-color: pink;height: 65px; }
 .header-logo-wrapper img {  max-width: 215px;}
 
 
+/* ===  HOMEPAGE - SECTIONS MAIN RULES === */
+
+/* all sections content */
+.explore-elements-wrapper,
+.how-elements-wrapper,
+.results-elements-wrapper { 
+    padding-top: 35px;
+    padding-bottom:50px;
+    width: 90%; 
+    margin-left: auto;margin-right: auto;
+}
+.explore-elements-wrapper * { margin-left: auto;margin-right: auto;}
+
+.footer-nav-wrapper {  
+
+    width: 90%; 
+    margin-left: auto; margin-right: auto;
+    padding-top: 25px;
+    padding-bottom:30px;}
+
+/* ====== */
+
+
+
 
 
 /* EXPLORE ===== */
 .explore-section { border:2px solid rgb(90, 252, 211);}
 
-.explore-section * { margin-left: auto;margin-right: auto;  }
+
 /* EXPLORE MOBILE */
 
 .search-bar-wrapper { height: 50px; border:2px solid rgb(36, 119, 243);}
 .explore-elements-wrapper { background-color: rgb(186, 147, 196);
-    height: 290px; 
-    padding-top: 30px;
-    padding-bottom:50px;
+    height: 290px;
+    text-align: center;
+
 }
 .explore-elements-wrapper h1 { width: 230px;}
 .explore-elements-wrapper p { width: 300px;}
@@ -140,10 +163,13 @@ header {  background-color: pink;height: 65px; }
 .results-cards-wrapper {}
 .result-card {height:250px; border: 2px solid violet; }
 
-.footer-nav-wrapper {
+
+/* FOOTER =====  */
+
+footer {
     height:195px;
-    background-color: green;
+    background-color: #000;
 }
 .footer-logo-wrapper { border:2px solid orange;}
-
 .footer-logo-wrapper img { max-width: 100px;}
+.footer-nav-wrapper p { margin: .5em;  color:white;}
