@@ -83,6 +83,8 @@ ul { margin: 0; padding: 0;}
 ul li { list-style: none; }
 
 
+
+
 /* ======================================== */
 /* TESTS STRUCTURE MAIN RESPONSIVE BLOCS */
 /* ======================================== */
@@ -106,14 +108,22 @@ header {  background-color: pink;height: 65px; }
 
 
 /* EXPLORE ===== */
-.explore-section {height: 340px; border:2px solid rgb(90, 252, 211);}
+.explore-section { border:2px solid rgb(90, 252, 211);}
 
+.explore-section * { margin-left: auto;margin-right: auto;  }
 /* EXPLORE MOBILE */
 
 .search-bar-wrapper { height: 50px; border:2px solid rgb(36, 119, 243);}
-.explore-elements-wrapper { height: 290px; background-color: rgb(186, 147, 196);}
-.explore-btn-wrapper { }
+.explore-elements-wrapper { background-color: rgb(186, 147, 196);
+    height: 290px; 
+    padding-top: 30px;
+    padding-bottom:50px;
+}
+.explore-elements-wrapper h1 { width: 230px;}
+.explore-elements-wrapper p { width: 300px;}
 
+.explore-btn-wrapper {margin-top:20px;margin-bottom:10px; }
+.explore-btn-wrapper button { height:50px; display: block;}
 
 /* EXPLORE DESKTOP */
 
