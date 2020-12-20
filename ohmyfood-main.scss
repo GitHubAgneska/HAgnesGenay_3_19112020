@@ -169,7 +169,8 @@ header {  background-color: pink;height: 65px; }
 footer {
     height:195px;
     background-color: #000;
+    padding-bottom:30px;
 }
-.footer-logo-wrapper { border:2px solid orange;}
+.footer-logo-wrapper { margin: 0 0 1em 0;}
 .footer-logo-wrapper img { max-width: 100px;}
-.footer-nav-wrapper p { margin: .5em;  color:white;}
+.footer-nav-wrapper p { margin: .5em 0 0 0;  color:white;}
