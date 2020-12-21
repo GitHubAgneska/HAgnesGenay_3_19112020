@@ -308,18 +308,21 @@ header { height: 65px; background-color: #fff; margin-top: 0;}
 /* ===================== */
 
 /* FOOTER  == any device  =====  */
-footer {
-    height:195px;
-    background-color: #353535;
-}
+footer { background-color: #353535; }
 .footer-logo-wrapper { margin: 0 0 1em 0;}
 .footer-logo-wrapper img { max-width: 100px;}
 .footer-nav-wrapper p { margin: .5em 0 0 0;  color:white;}
 
-/* FOOTER  == 1200 and up ---  */
-@media only screen and (min-width: 1200px) {
+/* FOOTER  ==  up to 600---  */
+@media only screen and (max-width: 600px) {
+    footer { height: 195px; }
+}
 
+/* FOOTER  == 600 and up ---  */
+@media only screen and (min-width: 601px) {
+    footer { height: 140px; }
     .footer-nav-wrapper ul
     { display: flex; flex-flow: row nowrap;  justify-content: space-between; }
-
 }
+
+
