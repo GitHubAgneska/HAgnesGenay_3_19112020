@@ -282,13 +282,13 @@ header { height: 65px; background-color: #fff; margin-top: 0;}
 @media only screen and (min-width: 601px) and (max-width: 768px) {
     .how-elements-wrapper { width: 80%; margin:auto;}
 }
-/*  HOW SECTION == from 768 to 992 ---  */
-@media only screen and (min-width: 769px) and (max-width: 992px) {
+/*  HOW SECTION == from 768 to 1200 ---  */
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
     .how-elements-wrapper { width: 60%; margin:auto;}
 }
 
 /*  HOW SECTION == 1200 and up ---  */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1201px) {
     .how-section { width: 95%; margin: auto; }
     .how-elements-wrapper { width: 50%; margin:auto;}
 }
