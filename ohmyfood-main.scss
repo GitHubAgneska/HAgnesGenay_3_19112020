@@ -257,11 +257,20 @@ header { height: 65px; background-color: #fff; margin-top: 0;}
 /*  HOW SECTION  == any device  =====  */
 .how-card {height: 75px; border:2px solid pink; background-color: #f6f6f6;  }
 
+
+/*  HOW SECTION == from 600 to 768 ---  */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .how-elements-wrapper { width: 80%; margin:auto;}
+}
+/*  HOW SECTION == from 768 to 992 ---  */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .how-elements-wrapper { width: 60%; margin:auto;}
+}
+
 /*  HOW SECTION == 1200 and up ---  */
 @media only screen and (min-width: 1200px) {
     .how-section { width: 95%; margin: auto; }
     .how-elements-wrapper { width: 50%; margin:auto;}
-
 }
 
 
