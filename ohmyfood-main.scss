@@ -95,11 +95,19 @@ ul { margin: 0; padding: 0;}
 ul li { list-style: none; }
 
 
+/* == any device  ===== */
+/* == up to 600  ----  */
+/* == up to 1200  ----  */
+/* == 1200 and up --- */
 
 
 /* ======================================== */
 /* TESTS STRUCTURE MAIN RESPONSIVE BLOCS */
 /* ======================================== */
+
+
+/* HEADER */
+/* ====== */
 
 
 /* HEADER == any device  ===== */
@@ -111,22 +119,21 @@ header { height: 65px; background-color: #fff; margin-top: 0;}
     display: block;
 }
 
-/* up to 1200  */
+/* HEADER == up to 1200  */
 @media only screen and (max-width: 1200px) {
     .header-logo-wrapper img { max-width: 170px;}
 }
-/* 1200 and up  */
+/* HEADER == 1200 and up  */
 @media only screen and (min-width: 1200px) {
     .header-logo-wrapper img { max-width: 215px;}
 }
 
 
 
-
 /* ===  HOMEPAGE -  MAIN SECTIONS COMMON RULES === */
+/* =============================================== */
 
-/* ANY DEVICE  ---- */
-
+/* HOMEPAGE - MAIN SECTIONS == any device  ===== */
 /* all sections content */
 .explore-elements-wrapper,
 .results-section { background-color: #f6f6f6;  }
@@ -148,7 +155,7 @@ header { height: 65px; background-color: #fff; margin-top: 0;}
     padding-top: 25px;}
 
 
-/* up to 1200  ----  */
+/* HOMEPAGE - MAIN SECTIONS == up to 1200  ----  */
 @media only screen and (max-width: 1200px) {
     /* all sections content */
     .explore-elements-wrapper,
@@ -166,11 +173,11 @@ header { height: 65px; background-color: #fff; margin-top: 0;}
     .footer-nav-wrapper {  
         width: 90%; 
         margin-left: auto; margin-right: auto;
-        padding-top: 25px;}
-
+        padding-top: 25px;
+    }
 } 
 
-/* Extra large devices (large laptops and desktops, 1200px and up)  ---- */
+/* HOMEPAGE - MAIN SECTIONS == 1200 and up ---  */
 @media only screen and (min-width: 1200px) {
     body { background-color: #cbcbcb;}
     .main-content-wrapper { 
@@ -192,38 +199,44 @@ header { height: 65px; background-color: #fff; margin-top: 0;}
 /* ====== */
 
 
+/* == any device  ===== */
+/* == up to 600  ----  */
+/* == up to 1200  ----  */
+/* == 1200 and up --- */
 
 
+/* EXPLORE SECTION ===== */
+/* ===================== */
 
-/* EXPLORE ===== */
-
-/* EXPLORE SECTION ELEMENTS --  ANY DEVICE  ---- */
+/* EXPLORE SECTION ELEMENTS  == any device  ===== */
 .explore-elements-wrapper { text-align: center; }
 
-/* search-bar any device */
+/* search-bar == any device  ===== */
 .search-bar-wrapper { height: 50px; background-color: #eaeaea;}
 /* .search-bar-wrapper .input-container > input[placeholder]{text-align: center; }*/
 
-/* search-bar  DESKTOP */
-@media only screen and (min-width: 1200px) { 
-    .search-bar-wrapper { width:60%; margin:35px auto; } 
-}  
-
-/* btn */
+/* EXPLORE btn == any device  ===== */
 .explore-btn-wrapper { margin-top:20px;margin-bottom:10px; }
 .explore-btn-wrapper button { height:50px; display: block;}
 
 
-/* EXPLORE MOBILE */
-/* up to 1200  ----  */
-@media only screen and (max-width: 1200px) {
+/* EXPLORE search-bar  == 1200 and up --- */
+@media only screen and (min-width: 1200px) { 
+    .search-bar-wrapper { width:60%; margin:35px auto; } 
+}  
+
+/* EXPLORE TEXT === up to 600  ----  */
+@media only screen and (max-width: 600px) {
     .explore-elements-wrapper h1 { width: 230px;}
     .explore-elements-wrapper p { width: 300px;}
 }
 
+/* EXPLORE SECTION == from 600 and up --- */
+@media only screen and (min-width: 601px) {
 
-/* EXPLORE DESKTOP  from 1200 */
-@media only screen and (min-width: 1200px) {
+}
+/* EXPLORE SECTION == 1200 and up --- */
+@media only screen and (min-width: 1201px) {
 
     .explore-section { display: flex; flex-flow: column nowrap; }
     .search-bar-wrapper { order:2; } /* search-bar goes below explore btn */
@@ -234,17 +247,17 @@ header { height: 65px; background-color: #fff; margin-top: 0;}
 
     .explore-elements-wrapper h1 { margin-bottom: 0;}
     .explore-elements-wrapper p { margin-top: 0;}
-
-
 }
 
 
 
-/*  HOW SECTION ==== Any device  */
+/*  HOW SECTION  */
+/* ============= */
 
+/*  HOW SECTION  == any device  =====  */
 .how-card {height: 75px; border:2px solid pink; background-color: #f6f6f6;  }
 
-/*  HOW SECTION ==== DESKTOP  */
+/*  HOW SECTION == 1200 and up ---  */
 @media only screen and (min-width: 1200px) {
     .how-section { width: 95%; margin: auto; }
     .how-elements-wrapper { width: 50%; margin:auto;}
@@ -252,32 +265,49 @@ header { height: 65px; background-color: #fff; margin-top: 0;}
 }
 
 
-/* RESULTS SECTION ====== MOBILE  */
+/* RESULTS SECTION */
+/* ===================== */
+
+
+/* RESULTS SECTION == any device  =====   */
 .result-card { height:250px; border: 2px solid violet; }
 
-/* RESULTS SECTION ====== DESKTOP  */
+
+/* RESULTS SECTION == from 600 and up : results on rows ---  */
+@media only screen and (min-width: 600px) { 
+    .results-cards-wrapper { 
+        display: flex; flex-flow: row wrap; justify-content: space-between;
+    }
+}
+
+/* RESULTS SECTION == from 600 to 1200 : results on rows of 2 ---  */
+@media only screen and (min-width: 601px) and (max-width: 1199px) {
+    .result-card { flex-basis: 50%; }
+}
+
+/* RESULTS SECTION == 1200 and up : results on rows of 4 ---  */
 @media only screen and (min-width: 1200px) {
     .results-cards-wrapper { 
         background-color: lightblue;
         width:95%; margin:auto;
-        display: flex; flex-flow: row wrap; justify-content: space-between;}
+    }
     .result-card { flex-basis: 20%; }
-
 }
 
 
+/* FOOTER  */
+/* ===================== */
 
-
-/* FOOTER any device=====  */
+/* FOOTER  == any device  =====  */
 footer {
     height:195px;
-    background-color: #000;
+    background-color: #353535;
 }
 .footer-logo-wrapper { margin: 0 0 1em 0;}
 .footer-logo-wrapper img { max-width: 100px;}
 .footer-nav-wrapper p { margin: .5em 0 0 0;  color:white;}
 
-/* FOOTER  ====== DESKTOP  */
+/* FOOTER  == 1200 and up ---  */
 @media only screen and (min-width: 1200px) {
 
     .footer-nav-wrapper ul
