@@ -1,0 +1,62 @@
+/* ======================================== */
+/* MENU PAGES */
+/* ======================================== */
+/* ======================================== */
+
+/* == any device  ===== */
+/* == up to 600  ----  */
+/* == up to 1200  ----  */
+/* == 1200 and up --- */
+
+/* ======================================== */
+/* STRUCTURE MAIN RESPONSIVE BLOCS */
+/* ======================================== */
+
+
+/* MENU PAGE - TOP IMAGE == any device  =====*/
+
+.main-content-wrapper { position: relative; }
+
+.main-img-wrapper figure {
+    height: 255px;
+    overflow: hidden;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.main-img-wrapper figure img {
+    min-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* MENU PAGE - MENU Section == any device  =====*/
+.menu {  
+        background-color: #f6f6f6; 
+        position: relative;
+        top: -60px;
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+}
+
+.menu-elements-wrapper{
+    width: 90%;
+    margin-left: auto; margin-right: auto;
+}
+.dish-card, .dish-card-txt-details { 
+    border: 2px solid green;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.dish-card-icon { 
+    background-color: pink;
+    width: 60px;
+}
+
+
+
+
+
+
+
