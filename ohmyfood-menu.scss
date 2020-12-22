@@ -14,7 +14,6 @@
 
 
 /* MENU PAGE - TOP IMAGE == any device  =====*/
-
 .main-content-wrapper { position: relative; }
 
 .main-img-wrapper figure {
@@ -38,20 +37,57 @@
         border-top-right-radius: 50px;
         border-top-left-radius: 50px;
 }
-
 .menu-elements-wrapper{
     width: 90%;
     margin-left: auto; margin-right: auto;
 }
-.dish-card, .dish-card-txt-details { 
+.menu-bloc h2 { 
+    text-transform: uppercase;
+    border-bottom: 5px solid green; }
+.dish-card {
     border: 2px solid green;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    /* content padding */  
+    padding: 14px 20px 14px 10px;
+    margin: 
 }
+
+.dish-card-txt h3, .dish-card-txt h4 { margin: 0; }
+
+
+
+/* tests */
+.dish-card-txt { min-width: 90%;}
+
+.dish-card-txt h3{ background-color: violet;}
+.dish-card-txt-details h4{ background-color: yellow;}
+
+
+.dish-card-txt-details h4:nth-child(2){ 
+    background-color: lightblue;
+    min-width:50px;
+}
+
+
+.dish-card-txt-details { 
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
 .dish-card-icon { 
     background-color: pink;
-    width: 60px;
+    width: 10%;
+}
+
+
+
+/* MENU PAGE - ORDER Section (order btn) == any device  =====*/
+.order-btn-wrapper { 
+    width: 20%;
+    margin: 20px auto; 
 }
 
 
