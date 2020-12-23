@@ -24,7 +24,7 @@
 - gris light 2 : #eaeaea MOBILE => search bar
 
 - gris moyen #cbcbcb => BG BODY DESKTOP
-
+- search icon + placeholder : #353535
 - icons 
 <i class="far fa-heart"></i>
 <i class="fas fa-mobile-alt"></i>
@@ -101,10 +101,11 @@ html {
 body { 
     margin: auto;
     font-family:'Roboto-regular', Arial, Helvetica, sans-serif;
+    background-color: #eaeaea; /* search-bar default color with shadow of header */
 }
 
 a { text-decoration: none; }
-input { border: transparent; background-color: inherit; text-align: center;}
+input { border: transparent; background-color: inherit;}
 ul { margin: 0; padding: 0;}
 ul li { list-style: none; }
 
@@ -113,6 +114,12 @@ ul li { list-style: none; }
 /* == up to 600  ----  */
 /* == up to 1200  ----  */
 /* == 1200 and up --- */
+
+
+
+/* ======================================== */
+/* VARIABLES */
+/* ======================================== */
 
 
 /* ======================================== */
@@ -125,16 +132,16 @@ ul li { list-style: none; }
 
 /* HEADER == any device  ===== */
 .header { 
-    height: 65px;
+    height: 60px;
     margin-top: 0;
     background-color: #fff;
+    box-shadow: 0px 3px 7px #979696;       /* =====>>>>>>  */
     &__logo-wrapper img {
             margin: auto;
             padding-top: 15px;
             display: block;
         }
 }
-
 /* HEADER == up to 1200  */
 @media only screen and (max-width: 1200px) {
     .header__logo-wrapper img { max-width: 170px;}
@@ -224,7 +231,24 @@ ul li { list-style: none; }
 .explore-elements-wrapper { text-align: center; }
 
 /* search-bar == any device  ===== */
-.search-bar-wrapper { height: 50px; background-color: #eaeaea;}
+.search-bar { 
+    &__elements-container { 
+        display:flex; flex-flow: row nowrap;  /* =====>>>>>>  */
+        justify-content: center;
+        margin: 15px 0px 15px 50px; 
+        .icon, .input-container { height: 20px; }
+        .icon { 
+            width: 20px;
+          /* center icon inside its container *//* =====>>>>>>  */
+            display: flex;
+            flex-flow: column nowrap;        
+            justify-content: center;
+            align-items: center;
+        }
+        .input-container {
+            input[placeholder]{ font-size:14px; }}  /* =====>>>>>>  */
+    }
+}
 /* .search-bar-wrapper .input-container > input[placeholder]{text-align: center; }*/
 
 /* EXPLORE btn == any device  ===== */

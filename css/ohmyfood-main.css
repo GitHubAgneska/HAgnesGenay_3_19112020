@@ -13,7 +13,7 @@
 - gris light 2 : #eaeaea MOBILE => search bar
 
 - gris moyen #cbcbcb => BG BODY DESKTOP
-
+- search icon + placeholder : #353535
 - icons 
 <i class="far fa-heart"></i>
 <i class="fas fa-mobile-alt"></i>
@@ -83,6 +83,8 @@ html {
 body {
   margin: auto;
   font-family: "Roboto-regular", Arial, Helvetica, sans-serif;
+  background-color: #eaeaea;
+  /* search-bar default color with shadow of header */
 }
 
 a {
@@ -92,7 +94,6 @@ a {
 input {
   border: transparent;
   background-color: inherit;
-  text-align: center;
 }
 
 ul {
@@ -109,15 +110,20 @@ ul li {
 /* == up to 1200  ----  */
 /* == 1200 and up --- */
 /* ======================================== */
+/* VARIABLES */
+/* ======================================== */
+/* ======================================== */
 /* STRUCTURE MAIN RESPONSIVE BLOCS */
 /* ======================================== */
 /* HEADER */
 /* ====== */
 /* HEADER == any device  ===== */
 .header {
-  height: 65px;
+  height: 60px;
   margin-top: 0;
   background-color: #fff;
+  box-shadow: 0px 3px 7px #979696;
+  /* =====>>>>>>  */
 }
 .header__logo-wrapper img {
   margin: auto;
@@ -239,9 +245,28 @@ ul li {
 }
 
 /* search-bar == any device  ===== */
-.search-bar-wrapper {
-  height: 50px;
-  background-color: #eaeaea;
+.search-bar__elements-container {
+  display: flex;
+  flex-flow: row nowrap;
+  /* =====>>>>>>  */
+  justify-content: center;
+  margin: 15px 0px 15px 50px;
+  /* =====>>>>>>  */
+}
+.search-bar__elements-container .icon, .search-bar__elements-container .input-container {
+  height: 20px;
+}
+.search-bar__elements-container .icon {
+  width: 20px;
+  /* center icon inside its container */
+  /* =====>>>>>>  */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.search-bar__elements-container .input-container input[placeholder] {
+  font-size: 14px;
 }
 
 /* .search-bar-wrapper .input-container > input[placeholder]{text-align: center; }*/
