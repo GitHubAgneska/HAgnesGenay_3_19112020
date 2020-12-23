@@ -29,7 +29,7 @@
     object-fit: cover;
 }
 
-/* MENU PAGE - MENU Section == any device  =====*/
+/* MENU PAGE - MENU Section == any device  ===== */
 .menu {  
         background-color: #f6f6f6; 
         position: relative;
@@ -45,13 +45,12 @@
     font-variant: small-caps;
    /*  border-bottom: 5px solid green; */ }
 
-.menu-bloc h2::after {
-
-    border: 4px solid pink;}
+.menu-bloc h2::after { border: 4px solid pink;}
 
 
-
+/* MENU PAGE - MENU Section -> DISH CARDS  == any device  ===== */
 .dish-card {
+    height:70px;
     background-color: grey;
     /* border-radius: 25px; */
     display: flex;
@@ -60,34 +59,39 @@
     margin: 2% auto;
 }
 
-.dish-card-txt h3, .dish-card-txt h4 { margin: 0; } 
-.dish-card-txt h3{ background-color: violet; padding-bottom: 7px;}
-.dish-card-txt-details h4:nth-child(2){ 
-    background-color: lightblue;
-    min-width:50px;
-}
-.dish-card-txt, .dish-card-icon { padding: 14px 0 14px 10px;}
-
-
-
-/* tests */
-.dish-card-txt { flex-basis: 90%; overflow: hidden;}
-
-.dish-card-txt-details h4{ background-color: yellow;}
-
-
-
-
+.dish-card-txt { padding: 14px 0 14px 10px; flex-basis: 90%; overflow: hidden; }
 .dish-card-txt-details { 
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
 }
+.dish-card-txt h3,
+.dish-card-txt h4 { margin: 0; max-height: 1.5em; overflow: hidden; } 
+.dish-card-txt h3 { background-color: violet; padding-bottom: 7px;}  /* dish name */
 
-.dish-card-icon { 
-    background-color: pink;
-    width: 60px;
+.dish-card-txt-details h4:nth-child(2){ /* dish price */
+    background-color: lightblue;
+    min-width:50px;
 }
+
+.dish-card-icon {
+    width: 60px;
+    height: 100%;
+    color: #fff; 
+    background-color:#99E2D0;
+    text-align: center;
+}
+
+.fas.fa-check-circle { font-size: 20px !important; line-height: 3.5;}
+
+
+/* tests */
+.dish-card-txt-details h4{ background-color: yellow;}
+
+
+
+
+
 
 
 
