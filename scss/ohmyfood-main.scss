@@ -123,23 +123,25 @@ ul li { list-style: none; }
 /* HEADER */
 /* ====== */
 
-
 /* HEADER == any device  ===== */
-header { height: 65px; background-color: #fff; margin-top: 0;}
-
-.header-logo-wrapper img { 
-    margin: auto;
-    padding-top: 15px;
-    display: block;
+.header { 
+    height: 65px;
+    margin-top: 0;
+    background-color: #fff;
+    &__logo-wrapper img {
+            margin: auto;
+            padding-top: 15px;
+            display: block;
+        }
 }
 
 /* HEADER == up to 1200  */
 @media only screen and (max-width: 1200px) {
-    .header-logo-wrapper img { max-width: 170px;}
+    .header__logo-wrapper img { max-width: 170px;}
 }
 /* HEADER == 1200 and up  */
 @media only screen and (min-width: 1200px) {
-    .header-logo-wrapper img { max-width: 215px;}
+    .header__logo-wrapper img { max-width: 215px;}
 }
 
 

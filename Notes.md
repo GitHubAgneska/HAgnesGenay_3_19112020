@@ -13,5 +13,7 @@
 
 - run command `sass `
 
+- !! browser inspector => deactivate 'show original sources' so it uses .css stylesheet and not .scss (which sass syntax will not do here in the browser)
+
 ---
 ---

@@ -114,13 +114,12 @@ ul li {
 /* HEADER */
 /* ====== */
 /* HEADER == any device  ===== */
-header {
+.header {
   height: 65px;
-  background-color: #fff;
   margin-top: 0;
+  background-color: #fff;
 }
-
-.header-logo-wrapper img {
+.header__logo-wrapper img {
   margin: auto;
   padding-top: 15px;
   display: block;
@@ -128,13 +127,13 @@ header {
 
 /* HEADER == up to 1200  */
 @media only screen and (max-width: 1200px) {
-  .header-logo-wrapper img {
+  .header__logo-wrapper img {
     max-width: 170px;
   }
 }
 /* HEADER == 1200 and up  */
 @media only screen and (min-width: 1200px) {
-  .header-logo-wrapper img {
+  .header__logo-wrapper img {
     max-width: 215px;
   }
 }
