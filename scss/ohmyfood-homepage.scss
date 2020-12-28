@@ -1,4 +1,22 @@
 
+/* @import "../sass/utils/variables";
+@import "../sass/utils/functions";
+@import "../sass/utils/mixins";
+*/
+@import "../sass/base/fonts";
+@import "../sass/base/main-rules"; 
+
+/* @import "../sass/components/buttons"; */
+
+/* @import "../sass/layouts/header";
+@import "../sass/layouts/footer";
+
+@import "../sass/pages/homepage";
+@import "../sass/pages/menupage"; */
+
+
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {}
 
@@ -14,100 +32,8 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {} 
 
-/* 
-- Primaire:  #9356DC (violet)
-- Secondaire:#FF79DA (rose)
-- Tertiaire: #99E2D0 (turquoise)
-
-- gris dark: #353535 FOOTER
-- gris light: #f6f6f6  HOME => BG explore / how cards inactives /  BG results  + BG MENU 
-- gris light 2 : #eaeaea MOBILE => search bar
-
-- gris moyen #cbcbcb => BG BODY DESKTOP
-- search icon + placeholder : #353535
-- icons 
-<i class="far fa-heart"></i>
-<i class="fas fa-mobile-alt"></i>
-<i class="fas fa-list-ul"></i>
-<i class="fas fa-store"></i>
-<i class="fas fa-utensils"></i>
-<i class="fas fa-hands-helping"></i>
-
-*/
 
 
-/* ================================== */
-/* ================================== */
-/* Fonts */
-/* ================================== */
-/* ================================== */
-
-@font-face { 
-    font-family:'Shrinkhand-regular';
-    src: url('assets/fonts/shrinkhand/shrinkhand-regular.ttf') format('ttf');
-    src: url('assets/fonts/shrinkhand/shrinkhand-regular.eot') format('eot');
-    src: url('assets/fonts/shrinkhand/shrinkhand-regular.woff') format('woff');
-}
-@font-face { 
-    font-family:'Roboto-thin';
-    src: url('assets/fonts/roboto/roboto-thin.ttf') format('ttf');
-    src: url('assets/fonts/roboto/roboto-thin.eot') format('eot');
-    src: url('assets/fonts/roboto/roboto-thin.woff') format('woff');
-}
-@font-face { 
-    font-family:'Roboto-regular';
-    src: url('assets/fonts/roboto/roboto-regular.ttf') format('ttf');
-    src: url('assets/fonts/roboto/roboto-regular.eot') format('eot');
-    src: url('assets/fonts/roboto/roboto-regular.woff') format('woff');
-}
-@font-face { 
-    font-family:'Roboto-medium';
-    src: url('assets/fonts/roboto/roboto-medium.ttf') format('ttf');
-    src: url('assets/fonts/roboto/roboto-medium.eot') format('eot');
-    src: url('assets/fonts/roboto/roboto-medium.woff') format('woff');
-}
-@font-face { 
-    font-family:'Roboto-bold';
-    src: url('assets/fonts/roboto/roboto-bold.ttf') format('ttf');
-    src: url('assets/fonts/roboto/roboto-bold.eot') format('eot');
-    src: url('assets/fonts/roboto/roboto-bold.woff') format('woff');
-}
-
-
-/* ================================== */
-/* ================================== */
-/* General rules */
-/* ================================== */
-/* ================================== */
-
-* {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-
-    transition: all 1s ease-in-out;
-    -webkit-transition: all 1s ease-in-out;
-    -ms-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-
-    scroll-behavior: smooth;
-}
-
-html {
-    font-size: 14px;
-    text-rendering: optimizeLegibility;
-}
-body { 
-    margin: auto;
-    font-family:'Roboto-regular', Arial, Helvetica, sans-serif;
-    background-color: #eaeaea; /* search-bar default color with shadow of header */
-}
-
-a { text-decoration: none; }
-input { border: transparent; background-color: inherit;}
-ul { margin: 0; padding: 0;}
-ul li { list-style: none; }
 
 
 /* == any device  ===== */
