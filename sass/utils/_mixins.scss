@@ -1,0 +1,69 @@
+/* ======================================== */
+/* BREAKPOINTS*/
+/* ======================================== */
+
+
+$breakpoints: (mobile: 599px, tablet: 767px, laptop: 991px, desktop: 1199px );
+
+
+/* == up to 600  */
+@mixin max-600px {
+    @media screen and (max-width: map-get($breakpoints, mobile )) {
+        @content;
+    }
+}
+/* == from 600  */
+@mixin min-600px {
+    @media screen and (min-width: map-get($breakpoints, mobile )) {
+        @content;
+    }
+}
+
+/* == from 600 to 768 */
+@mixin min600px-max768px {
+    @media screen and (min-width: map-get($breakpoints, mobile )) and (max-width: map-get($breakpoints, tablet )){
+        @content;
+    }
+}
+
+/* == from 600 to 1200 */
+@mixin min600px-max1200px {
+    @media screen and (min-width: map-get($breakpoints, mobile )) and (max-width: map-get($breakpoints, desktop )){
+        @content;
+    }
+}
+
+/* == up to 768  */
+@mixin max-768px {
+    @media screen and (max-width: map-get($breakpoints, tablet )) {
+        @content;
+    }
+}
+/* == from 768 to  1200  */
+@mixin min768px-max1200px {
+    @media screen and (min-width: map-get($breakpoints, tablet )) and (max-width: map-get($breakpoints, desktop )){
+        @content;
+    }
+}
+
+
+/* == up to 992  */
+@mixin max-992px {
+    @media screen and (max-width: map-get($breakpoints, laptop )) {
+        @content;
+    }
+}
+
+/* == up to 1200  */
+@mixin max-1200px {
+    @media screen and (max-width: map-get($breakpoints, desktop )) {
+        @content;
+    }
+}
+
+/* == from 1200  */
+@mixin min-1200px {
+    @media screen and (min-width: map-get($breakpoints, desktop )) {
+        @content;
+    }
+}
