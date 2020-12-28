@@ -1,7 +1,46 @@
-/* @import "./utils/variables";
-@import "./utils/functions";
-@import "./utils/mixins";
+/* ======================================== */
+/* COLOURS */
+/* ======================================== */
+/* basics */
+/* violet */
+/* rose */
+/* turquoise */
+/* lightgrey - HOME => BG explore / how cards inactives /  BG results  + BG MENU */
+/* medium grey => BG BODY DESKTOP */
+/* dark grey - footer */
+/* SPECIFICS =================> use functions instead */
+/* lightgrey2 => MOBILE => search bar */
+/* grey search icon + placeholder */
+/* 
+- icons 
+<i class="far fa-heart"></i>
+<i class="fas fa-mobile-alt"></i>
+<i class="fas fa-list-ul"></i>
+<i class="fas fa-store"></i>
+<i class="fas fa-utensils"></i>
+<i class="fas fa-hands-helping"></i>
 */
+/* ======================================== */
+/* BREAKPOINTS*/
+/* ======================================== */
+/* == up to 600  */
+/* == from 600  */
+/* == from 600 to 768 */
+/* == from 600 to 1200 */
+/* == up to 768  */
+/* == from 768 to  1200  */
+/* == up to 992  */
+/* == up to 1200  */
+/* == from 1200  */
+/* ======================================== */
+/* FLEXBOX */
+/* ======================================== */
+/* ======================================== */
+/* MARGINS  */
+/* ======================================== */
+/* ======================================== */
+/* PADDINGS  */
+/* ======================================== */
 /* ================================== */
 /* Fonts */
 /* ================================== */
@@ -80,30 +119,7 @@ ul li {
   list-style: none;
 }
 
-/* @import "./components/buttons"; */
-/* @import "./layouts/header";
-@import "./layouts/footer";
-
-@import "./pages/homepage";
-@import "./pages/menupage"; */
-/* Extra small devices (phones, 600px and down) */
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* Medium devices (landscape tablets, 768px and up) */
-/* Large devices (laptops/desktops, 992px and up) */
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* == any device  ===== */
-/* == up to 600  ----  */
-/* == up to 1200  ----  */
-/* == 1200 and up --- */
-/* ======================================== */
-/* MIXINS */
-/* ======================================== */
-/* ======================================== */
-/* STRUCTURE MAIN RESPONSIVE BLOCS */
-/* ======================================== */
-/* HEADER */
-/* ====== */
-/* HEADER == any device  ===== */
+/* @import "../sass/components/buttons"; */
 .header {
   height: 60px;
   margin-top: 0;
@@ -116,19 +132,23 @@ ul li {
   padding-top: 15px;
   display: block;
 }
-
-/* HEADER == up to 1200  */
-@media only screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .header__logo-wrapper img {
     max-width: 170px;
   }
 }
-/* HEADER == 1200 and up  */
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1199px) {
   .header__logo-wrapper img {
     max-width: 215px;
   }
 }
+
+/* 
+@import "../sass/pages/homepage";
+@import "../sass/pages/menupage"; */
+/* ======================================== */
+/* STRUCTURE MAIN RESPONSIVE BLOCS */
+/* ======================================== */
 /* ===  HOMEPAGE -  MAIN SECTIONS COMMON RULES === */
 /* =============================================== */
 /* HOMEPAGE - MAIN SECTIONS == any device  ===== */
@@ -148,15 +168,11 @@ ul li {
 .explore-elements-wrapper * {
   margin-left: auto;
   margin-right: auto;
-  /* margin-left: auto; margin-right: auto; */
-  /* =====>>>>>>  */
 }
 
 .footer-nav-wrapper {
   margin-left: auto;
   margin-right: auto;
-  /* margin-left: auto; margin-right: auto; */
-  /* =====>>>>>>  */
   padding-top: 25px;
 }
 

@@ -1,7 +1,46 @@
-/* @import "./utils/variables";
-@import "./utils/functions";
-@import "./utils/mixins";
- */
+/* ======================================== */
+/* COLOURS */
+/* ======================================== */
+/* basics */
+/* violet */
+/* rose */
+/* turquoise */
+/* lightgrey - HOME => BG explore / how cards inactives /  BG results  + BG MENU */
+/* medium grey => BG BODY DESKTOP */
+/* dark grey - footer */
+/* SPECIFICS =================> use functions instead */
+/* lightgrey2 => MOBILE => search bar */
+/* grey search icon + placeholder */
+/* 
+- icons 
+<i class="far fa-heart"></i>
+<i class="fas fa-mobile-alt"></i>
+<i class="fas fa-list-ul"></i>
+<i class="fas fa-store"></i>
+<i class="fas fa-utensils"></i>
+<i class="fas fa-hands-helping"></i>
+*/
+/* ======================================== */
+/* BREAKPOINTS*/
+/* ======================================== */
+/* == up to 600  */
+/* == from 600  */
+/* == from 600 to 768 */
+/* == from 600 to 1200 */
+/* == up to 768  */
+/* == from 768 to  1200  */
+/* == up to 992  */
+/* == up to 1200  */
+/* == from 1200  */
+/* ======================================== */
+/* FLEXBOX */
+/* ======================================== */
+/* ======================================== */
+/* MARGINS  */
+/* ======================================== */
+/* ======================================== */
+/* PADDINGS  */
+/* ======================================== */
 /* ================================== */
 /* Fonts */
 /* ================================== */
@@ -80,20 +119,15 @@ ul li {
   list-style: none;
 }
 
-/* @import "./components/buttons"; */
-/* @import "./layouts/header";
-@import "./layouts/footer";
+/* @import "../sass/components/buttons"; */
+/* @import "../sass/layouts/header";
+@import "../sass/layouts/footer";
 
-@import "./pages/homepage";
-@import "./pages/menupage"; */
+@import "../sass/pages/homepage";
+@import "../sass/pages/menupage"; */
 /* ======================================== */
 /* MENU PAGES */
 /* ======================================== */
-/* ======================================== */
-/* == any device  ===== */
-/* == up to 600  ----  */
-/* == up to 1200  ----  */
-/* == 1200 and up --- */
 /* ======================================== */
 /* STRUCTURE MAIN RESPONSIVE BLOCS */
 /* ======================================== */

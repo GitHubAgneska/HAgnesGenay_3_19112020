@@ -1,10 +1,10 @@
+
+@use "sass:map";
+
 /* ======================================== */
 /* BREAKPOINTS*/
 /* ======================================== */
-
-
 $breakpoints: (mobile: 599px, tablet: 767px, laptop: 991px, desktop: 1199px );
-
 
 /* == up to 600  */
 @mixin max-600px {
@@ -46,7 +46,6 @@ $breakpoints: (mobile: 599px, tablet: 767px, laptop: 991px, desktop: 1199px );
     }
 }
 
-
 /* == up to 992  */
 @mixin max-992px {
     @media screen and (max-width: map-get($breakpoints, laptop )) {
@@ -67,3 +66,42 @@ $breakpoints: (mobile: 599px, tablet: 767px, laptop: 991px, desktop: 1199px );
         @content;
     }
 }
+
+
+
+/* ======================================== */
+/* FLEXBOX */
+/* ======================================== */
+
+$dir: ( column, row );
+$wrap: ( wrap, nowrap );
+
+@mixin flex($dir, $wrap) {
+    display: flex;
+    flex-flow: $dir $wrap;
+}
+
+
+
+
+/* ======================================== */
+/* MARGINS  */
+/* ======================================== */
+
+@mixin mlmr-auto {
+    margin-left: auto; margin-right: auto;
+}
+
+@mixin m-auto { margin: auto; }
+
+
+/* ======================================== */
+/* PADDINGS  */
+/* ======================================== */
+
+@mixin p-top-base {
+    padding-top: 25px;
+}
+
+
+

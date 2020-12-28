@@ -4,17 +4,36 @@
 /* COLOURS */
 /* ======================================== */
 
+/* basics */
+$white: #fff;
+
+
+
+/* violet */
+$primary: #9356DC;
+/* rose */
+$secondary: #FF79DA;
+/* turquoise */
+$tertiary: #99E2D0;
+
+/* lightgrey - HOME => BG explore / how cards inactives /  BG results  + BG MENU */
+$lightgrey: #f6f6f6;
+/* medium grey => BG BODY DESKTOP */
+$mediumgrey: #cbcbcb;
+/* dark grey - footer */
+$darkgrey: #353535;
+
+
+/* SPECIFICS =================> use functions instead */
+/* lightgrey2 => MOBILE => search bar */
+$lightgrey2:#eaeaea;
+/* grey search icon + placeholder */
+$greySpecific: #353535;
+
+
+
+
 /* 
-- Primaire:  #9356DC (violet)
-- Secondaire:#FF79DA (rose)
-- Tertiaire: #99E2D0 (turquoise)
-
-- gris dark: #353535 FOOTER
-- gris light: #f6f6f6  HOME => BG explore / how cards inactives /  BG results  + BG MENU 
-- gris light 2 : #eaeaea MOBILE => search bar
-
-- gris moyen #cbcbcb => BG BODY DESKTOP
-- search icon + placeholder : #353535
 - icons 
 <i class="far fa-heart"></i>
 <i class="fas fa-mobile-alt"></i>
@@ -22,5 +41,4 @@
 <i class="fas fa-store"></i>
 <i class="fas fa-utensils"></i>
 <i class="fas fa-hands-helping"></i>
-
 */
