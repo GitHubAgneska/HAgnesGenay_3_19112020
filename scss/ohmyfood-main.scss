@@ -118,8 +118,21 @@ ul li { list-style: none; }
 
 
 /* ======================================== */
-/* VARIABLES */
+/* MIXINS */
 /* ======================================== */
+
+@mixin flexCol-noWrap {
+    display: flex;
+    flex-direction: column;
+}
+@mixin flexRow-noWrap {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin mlmr-auto {
+    margin-left: auto; margin-right: auto;
+}
 
 
 /* ======================================== */
@@ -166,11 +179,13 @@ ul li { list-style: none; }
 .how-elements-wrapper,
 .results-elements-wrapper,
 .explore-elements-wrapper * { 
-    margin-left: auto; margin-right: auto; /* =====>>>>>>  */
+    @include mlmr-auto;
+    /* margin-left: auto; margin-right: auto; */ /* =====>>>>>>  */
 }
 
 .footer-nav-wrapper {  
-    margin-left: auto; margin-right: auto; /* =====>>>>>>  */
+    @include mlmr-auto;
+    /* margin-left: auto; margin-right: auto; */ /* =====>>>>>>  */
     padding-top: 25px;}
 
 
@@ -187,7 +202,7 @@ ul li { list-style: none; }
 @media only screen and (max-width: 1200px) {
     .how-elements-wrapper,
     .results-elements-wrapper { width: 90%; }
-    .explore-elements-wrapper * { margin-left: auto; margin-right: auto; /* =====>>>>>>  */ }
+    .explore-elements-wrapper * { @include mlmr-auto; /* =====>>>>>>  */ }
     .footer-nav-wrapper { width: 90%; padding-top: 25px; }
 }
 
@@ -209,7 +224,8 @@ ul li { list-style: none; }
     .main-content-wrapper { background-color: #f6f6f6; }
     .main-content-wrapper,
     .footer-nav-wrapper { width: 80%; 
-        margin-left: auto;margin-right: auto;  /* =====>>>>>>  */ }
+        @include mlmr-auto;
+        /* margin-left: auto;margin-right: auto;  */ /* =====>>>>>>  */ }
 
     /* all sections titles  */
     h2 { text-align: center;}
