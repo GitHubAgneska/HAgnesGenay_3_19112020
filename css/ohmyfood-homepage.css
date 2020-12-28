@@ -143,6 +143,55 @@ ul li {
   }
 }
 
+.nav {
+  background-color: #353535;
+}
+.nav__wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 25px;
+}
+.nav__wrapper p {
+  margin: 0.5em 0 0 0;
+  color: #fff;
+}
+@media screen and (min-width: 599px) {
+  .nav__wrapper ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .nav__wrapper {
+    width: 90%;
+    padding-top: 25px;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .nav__wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.nav__logo-wrapper {
+  margin: 0 0 1em 0;
+}
+.nav__logo-wrapper img {
+  max-width: 100px;
+}
+@media screen and (max-width: 599px) {
+  .nav {
+    height: 195px;
+  }
+}
+@media screen and (min-width: 599px) {
+  .nav {
+    height: 140px;
+  }
+}
+
 /* 
 @import "../sass/pages/homepage";
 @import "../sass/pages/menupage"; */
@@ -170,12 +219,10 @@ ul li {
   margin-right: auto;
 }
 
-.footer-nav-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 25px;
-}
-
+/* footer-nav-wrapper => in _footer.scss */
+/* .nav__wrapper {  
+    @include mlmr-auto;
+    padding-top: 25px; } */
 /* HOMEPAGE - MAIN SECTIONS == up to 600 ---  */
 @media only screen and (max-width: 600px) {
   .explore-elements-wrapper,
@@ -198,10 +245,8 @@ ul li {
     /* =====>>>>>>  */
   }
 
-  .footer-nav-wrapper {
-    width: 90%;
-    padding-top: 25px;
-  }
+  /* footer-nav-wrapper  */
+  /* .nav__wrapper { width: 90%; padding-top: 25px; } */
 }
 /* HOMEPAGE - MAIN SECTIONS == from 600 to 1200 ---  */
 @media only screen and (min-width: 601px) {
@@ -224,24 +269,11 @@ ul li {
   }
 
   .main-content-wrapper,
-.footer-nav-wrapper {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    /* margin-left: auto;margin-right: auto;  */
-    /* =====>>>>>>  */
-  }
-
-  /* all sections titles  */
-  h2 {
+h2 {
     text-align: center;
   }
 }
 /* ====== */
-/* == any device  ===== */
-/* == up to 600  ----  */
-/* == up to 1200  ----  */
-/* == 1200 and up --- */
 /* EXPLORE SECTION ===== */
 /* ===================== */
 /* EXPLORE SECTION ELEMENTS  == any device  ===== */
@@ -428,44 +460,6 @@ ul li {
 
   .result-card {
     flex-basis: 20%;
-  }
-}
-/* FOOTER  */
-/* ===================== */
-/* FOOTER  == any device  =====  */
-footer {
-  background-color: #353535;
-}
-
-.footer-logo-wrapper {
-  margin: 0 0 1em 0;
-}
-
-.footer-logo-wrapper img {
-  max-width: 100px;
-}
-
-.footer-nav-wrapper p {
-  margin: 0.5em 0 0 0;
-  color: white;
-}
-
-/* FOOTER  ==  up to 600---  */
-@media only screen and (max-width: 600px) {
-  footer {
-    height: 195px;
-  }
-}
-/* FOOTER  == 600 and up ---  */
-@media only screen and (min-width: 601px) {
-  footer {
-    height: 140px;
-  }
-
-  .footer-nav-wrapper ul {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
   }
 }
 

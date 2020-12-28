@@ -1,0 +1,24 @@
+
+
+.nav {
+    background-color: $darkgrey;
+    &__wrapper {
+        @include mlmr-auto;
+        padding-top: 25px;
+
+        p { margin: 0.5em 0 0 0;
+            color: $white; }
+        ul { 
+            @include min-600px {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+            }
+        }
+        @include max-1200px { width: 90%; padding-top: 25px; }
+        @include min-1200px { width: 80%; @include mlmr-auto; }
+    }
+    &__logo-wrapper { margin: 0 0 1em 0; img { max-width: 100px; } }
+    @include max-600px { height: 195px; }
+    @include min-600px { height: 140px; }
+}
