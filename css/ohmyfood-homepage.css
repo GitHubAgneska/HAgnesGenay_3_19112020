@@ -161,6 +161,16 @@ ul li {
   margin-right: auto;
   padding-top: 25px;
 }
+@media screen and (max-width: 1199px) {
+  .nav__wrapper {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .nav__wrapper {
+    width: 80%;
+  }
+}
 .nav__wrapper p {
   margin: 0.5em 0 0 0;
   color: #fff;
@@ -172,19 +182,6 @@ ul li {
     justify-content: space-between;
   }
 }
-@media screen and (max-width: 1199px) {
-  .nav__wrapper {
-    width: 90%;
-    padding-top: 25px;
-  }
-}
-@media screen and (min-width: 1199px) {
-  .nav__wrapper {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 .nav__logo-wrapper {
   margin: 0 0 1em 0;
 }
@@ -192,9 +189,9 @@ ul li {
   max-width: 100px;
 }
 
-/* 
-@import "../sass/pages/homepage";
-@import "../sass/pages/menupage"; */
+/* =============================================== */
+/* ===  HOMEPAGE -  MAIN SECTIONS === */
+/* =============================================== */
 /* ======================================== */
 /* STRUCTURE MAIN RESPONSIVE BLOCS */
 /* ======================================== */
@@ -212,8 +209,8 @@ ul li {
 }
 
 .explore-elements-wrapper,
-.how-elements-wrapper,
-.results-elements-wrapper,
+.how-section--wrapper,
+.results-section--wrapper,
 .explore-elements-wrapper * {
   margin-left: auto;
   margin-right: auto;
@@ -226,16 +223,16 @@ ul li {
 /* HOMEPAGE - MAIN SECTIONS == up to 600 ---  */
 @media only screen and (max-width: 600px) {
   .explore-elements-wrapper,
-.how-elements-wrapper,
-.results-elements-wrapper {
+.how-section--wrapper,
+.results-section--wrapper {
     padding-top: 35px;
     padding-bottom: 50px;
   }
 }
 /* HOMEPAGE - MAIN SECTIONS == up to 1200  ---- */
 @media only screen and (max-width: 1200px) {
-  .how-elements-wrapper,
-.results-elements-wrapper {
+  .how-section--wrapper,
+.results-section--wrapper {
     width: 90%;
   }
 
@@ -252,8 +249,8 @@ ul li {
 @media only screen and (min-width: 601px) {
   /* all sections content */
   .explore-elements-wrapper,
-.how-elements-wrapper,
-.results-elements-wrapper {
+.how-section--wrapper,
+.results-section--wrapper {
     padding-top: 15px;
     padding-bottom: 35px;
   }
@@ -396,7 +393,7 @@ h2 {
 /*  HOW SECTION  */
 /* ============= */
 /*  HOW SECTION  == any device  =====  */
-.how-card {
+.how-section--card {
   height: 75px;
   border: 2px solid pink;
   background-color: #f6f6f6;
@@ -404,14 +401,14 @@ h2 {
 
 /*  HOW SECTION == from 600 to 768 ---  */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
-  .how-elements-wrapper {
+  .how-section--wrapper {
     width: 80%;
     margin: auto;
   }
 }
 /*  HOW SECTION == from 768 to 1200 ---  */
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
-  .how-elements-wrapper {
+  .how-section--wrapper {
     width: 60%;
     margin: auto;
   }
@@ -423,7 +420,7 @@ h2 {
     margin: auto;
   }
 
-  .how-elements-wrapper {
+  .how-section--wrapper {
     width: 50%;
     margin: auto;
   }
@@ -431,14 +428,19 @@ h2 {
 /* RESULTS SECTION */
 /* ===================== */
 /* RESULTS SECTION == any device  =====   */
-.result-card {
+.results-section--card {
   height: 250px;
   border: 2px solid violet;
+}
+.results-section--card a {
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 /* RESULTS SECTION == from 600 and up : results on rows ---  */
 @media only screen and (min-width: 600px) {
-  .results-cards-wrapper {
+  .results-section--cards-wrapper {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -446,19 +448,19 @@ h2 {
 }
 /* RESULTS SECTION == from 600 to 1200 : results on rows of 2 ---  */
 @media only screen and (min-width: 601px) and (max-width: 1199px) {
-  .result-card {
+  .results-section--card {
     flex-basis: 50%;
   }
 }
 /* RESULTS SECTION == 1200 and up : results on rows of 4 ---  */
 @media only screen and (min-width: 1200px) {
-  .results-cards-wrapper {
+  .results-section--cards-wrapper {
     background-color: lightblue;
     width: 95%;
     margin: auto;
   }
 
-  .result-card {
+  .results-section--card {
     flex-basis: 20%;
   }
 }
