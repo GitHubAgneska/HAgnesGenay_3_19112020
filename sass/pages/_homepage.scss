@@ -140,7 +140,34 @@
         @include min768px-max1200px { width: 60%; margin:auto; }
         @include min-1200px { width: 50%; margin:auto; }
     }
-    &__card {height: 75px; border:2px solid pink; background-color: #f6f6f6; }
+    &__card { 
+        position: relative;
+        border:2px solid pink;
+        height: 75px;
+        background-color: $lightgrey;
+        margin-bottom: 20px;            /* =====>>>>>>  */
+        .card-elements { 
+            background-color: lightyellow;
+            margin: 15px auto;   /* =====>>>>>>  */
+            height:25px;
+            display: flex; flex-flow: row nowrap;  /* =====>>>>>>  */
+            .card-number { 
+                background-color:salmon;
+                width:25px;height:25px;
+                position:absolute;
+                transform:translateX(-17px);
+                color:$white;
+                @include icon-base;
+            }
+            .card-icon {
+                background-color:yellow;
+                width: 35px; height: 25px;
+                margin: auto 15px;
+                @include icon-base;
+            
+            }
+        }
+    }
 }
 
 

@@ -417,22 +417,6 @@ ul li {
 }
 /*  HOW SECTION  */
 /* ============= */
-/*  HOW SECTION  == any device  =====  */
-/* .how-section__card {height: 75px; border:2px solid pink; background-color: #f6f6f6;  }
- */
-/*  HOW SECTION == from 600 to 768 ---  */
-/* @media only screen and (min-width: 601px) and (max-width: 768px) {
-    .how-section__wrapper { width: 80%; margin:auto;}
-} */
-/*  HOW SECTION == from 768 to 1200 ---  */
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
-  /* .how-section__wrapper { width: 60%; margin:auto;} */
-}
-/*  HOW SECTION == 1200 and up ---  */
-@media only screen and (min-width: 1201px) {
-  /* .how-section { width: 95%; margin: auto; } */
-  /* .how-section--wrapper { width: 50%; margin:auto;} */
-}
 @media screen and (min-width: 1199px) {
   .how-section {
     width: 95%;
@@ -458,9 +442,42 @@ ul li {
   }
 }
 .how-section__card {
-  height: 75px;
+  position: relative;
   border: 2px solid pink;
+  height: 75px;
   background-color: #f6f6f6;
+  margin-bottom: 20px;
+  /* =====>>>>>>  */
+}
+.how-section__card .card-elements {
+  background-color: lightyellow;
+  margin: 15px auto;
+  /* =====>>>>>>  */
+  height: 25px;
+  display: flex;
+  flex-flow: row nowrap;
+  /* =====>>>>>>  */
+}
+.how-section__card .card-elements .card-number {
+  background-color: salmon;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  transform: translateX(-17px);
+  color: #fff;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.how-section__card .card-elements .card-icon {
+  width: 35px;
+  height: 25px;
+  margin: auto 15px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 /* RESULTS SECTION */
