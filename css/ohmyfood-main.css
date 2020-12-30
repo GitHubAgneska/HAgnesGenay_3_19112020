@@ -238,7 +238,7 @@ ul li {
 }
 
 .explore-elements-wrapper,
-.how-section--wrapper,
+.how-section__wrapper,
 .results-section--wrapper,
 .explore-elements-wrapper * {
   margin-left: auto;
@@ -250,7 +250,7 @@ ul li {
 /* HOMEPAGE - MAIN SECTIONS == up to 600 ---  */
 @media only screen and (max-width: 600px) {
   .explore-elements-wrapper,
-.how-section--wrapper,
+.how-section__wrapper,
 .results-section--wrapper {
     padding-top: 35px;
     padding-bottom: 50px;
@@ -258,7 +258,7 @@ ul li {
 }
 /* HOMEPAGE - MAIN SECTIONS == up to 1200  ---- */
 @media only screen and (max-width: 1200px) {
-  .how-section--wrapper,
+  .how-section__wrapper,
 .results-section--wrapper {
     width: 90%;
   }
@@ -274,7 +274,7 @@ ul li {
 @media only screen and (min-width: 601px) {
   /* all sections content */
   .explore-elements-wrapper,
-.how-section--wrapper,
+.how-section__wrapper,
 .results-section--wrapper {
     padding-top: 15px;
     padding-bottom: 35px;
@@ -418,38 +418,51 @@ ul li {
 /*  HOW SECTION  */
 /* ============= */
 /*  HOW SECTION  == any device  =====  */
-.how-section--card {
+/* .how-section__card {height: 75px; border:2px solid pink; background-color: #f6f6f6;  }
+ */
+/*  HOW SECTION == from 600 to 768 ---  */
+/* @media only screen and (min-width: 601px) and (max-width: 768px) {
+    .how-section__wrapper { width: 80%; margin:auto;}
+} */
+/*  HOW SECTION == from 768 to 1200 ---  */
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  /* .how-section__wrapper { width: 60%; margin:auto;} */
+}
+/*  HOW SECTION == 1200 and up ---  */
+@media only screen and (min-width: 1201px) {
+  /* .how-section { width: 95%; margin: auto; } */
+  /* .how-section--wrapper { width: 50%; margin:auto;} */
+}
+@media screen and (min-width: 1199px) {
+  .how-section {
+    width: 95%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 599px) and (max-width: 767px) {
+  .how-section__wrapper {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .how-section__wrapper {
+    width: 60%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .how-section__wrapper {
+    width: 50%;
+    margin: auto;
+  }
+}
+.how-section__card {
   height: 75px;
   border: 2px solid pink;
   background-color: #f6f6f6;
 }
 
-/*  HOW SECTION == from 600 to 768 ---  */
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-  .how-section--wrapper {
-    width: 80%;
-    margin: auto;
-  }
-}
-/*  HOW SECTION == from 768 to 1200 ---  */
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
-  .how-section--wrapper {
-    width: 60%;
-    margin: auto;
-  }
-}
-/*  HOW SECTION == 1200 and up ---  */
-@media only screen and (min-width: 1201px) {
-  .how-section {
-    width: 95%;
-    margin: auto;
-  }
-
-  .how-section--wrapper {
-    width: 50%;
-    margin: auto;
-  }
-}
 /* RESULTS SECTION */
 /* ===================== */
 /* RESULTS SECTION == any device  =====   */

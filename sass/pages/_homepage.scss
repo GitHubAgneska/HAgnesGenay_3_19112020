@@ -11,7 +11,7 @@
 .how-section { background-color: $white; }
 
 .explore-elements-wrapper,
-.how-section--wrapper,
+.how-section__wrapper,
 .results-section--wrapper,
 .explore-elements-wrapper * { 
     @include mlmr-auto;
@@ -23,7 +23,7 @@
 /* HOMEPAGE - MAIN SECTIONS == up to 600 ---  */
 @media only screen and (max-width: 600px)  {
     .explore-elements-wrapper,
-    .how-section--wrapper,
+    .how-section__wrapper,
     .results-section--wrapper { 
         padding-top: 35px;
         padding-bottom:50px;
@@ -31,7 +31,7 @@
 }
 /* HOMEPAGE - MAIN SECTIONS == up to 1200  ---- */
 @media only screen and (max-width: 1200px) {
-    .how-section--wrapper,
+    .how-section__wrapper,
     .results-section--wrapper { width: 90%; }
     .explore-elements-wrapper * { @include mlmr-auto; }
     /* =FYI= .nav__wrapper (footer) { width: 90%; padding-top: 25px; } */
@@ -40,7 +40,7 @@
 @media only screen and (min-width: 601px)  {
     /* all sections content */
     .explore-elements-wrapper,
-    .how-section--wrapper,
+    .how-section__wrapper,
     .results-section--wrapper { 
         padding-top: 15px;
         padding-bottom:35px;
@@ -133,22 +133,26 @@
 /*  HOW SECTION  */
 /* ============= */
 
-/*  HOW SECTION  == any device  =====  */
-.how-section--card {height: 75px; border:2px solid pink; background-color: #f6f6f6;  }
+.how-section {
+    @include min-1200px { width: 95%; margin: auto; }
+    &__wrapper {
+        @include min600px-max768px { width: 80%; margin:auto;}
+        @include min768px-max1200px { width: 60%; margin:auto; }
+        @include min-1200px { width: 50%; margin:auto; }
+    }
+    &__card {height: 75px; border:2px solid pink; background-color: #f6f6f6; }
+}
 
-/*  HOW SECTION == from 600 to 768 ---  */
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-    .how-section--wrapper { width: 80%; margin:auto;}
-}
-/*  HOW SECTION == from 768 to 1200 ---  */
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
-    .how-section--wrapper { width: 60%; margin:auto;}
-}
-/*  HOW SECTION == 1200 and up ---  */
-@media only screen and (min-width: 1201px) {
-    .how-section { width: 95%; margin: auto; }
-    .how-section--wrapper { width: 50%; margin:auto;}
-}
+
+
+
+
+
+
+
+
+
+
 
 
 /* RESULTS SECTION */
