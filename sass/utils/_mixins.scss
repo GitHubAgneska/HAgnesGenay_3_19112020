@@ -73,8 +73,8 @@ $breakpoints: (mobile: 599px, tablet: 767px, laptop: 991px, desktop: 1199px );
 /* FLEXBOX */
 /* ======================================== */
 
-$dir: ( column, row );
-$wrap: ( wrap, nowrap );
+$dir: ( col:column, row:row );
+$wrap: ( wrap:wrap, nwrap:nowrap );
 
 @mixin flex($dir, $wrap) {
     display: flex;
@@ -111,6 +111,18 @@ $wrap: ( wrap, nowrap );
 @mixin h100w100 {
     height:100%; width:100%;
 }
+
+/* ======================================== */
+/* ICONS */
+/* ======================================== */
+
+@mixin icon-base {
+    display: flex;
+    flex-flow: column nowrap;        
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 

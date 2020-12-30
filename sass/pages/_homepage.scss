@@ -16,9 +16,8 @@
 .explore-elements-wrapper * { 
     @include mlmr-auto;
 }
-/* =FYI=  .nav__wrapper {  
-    @include mlmr-auto;
-    padding-top: 25px; } */
+/* =FYI= */
+/* .nav__wrapper { @include mlmr-auto; padding-top: 25px; } */
 
 
 /* HOMEPAGE - MAIN SECTIONS == up to 600 ---  */
@@ -34,10 +33,8 @@
 @media only screen and (max-width: 1200px) {
     .how-section--wrapper,
     .results-section--wrapper { width: 90%; }
-    .explore-elements-wrapper * { @include mlmr-auto; /* =====>>>>>>  */ }
-
-    /* footer-nav-wrapper  */
-    /* .nav__wrapper { width: 90%; padding-top: 25px; } */
+    .explore-elements-wrapper * { @include mlmr-auto; }
+    /* =FYI= .nav__wrapper (footer) { width: 90%; padding-top: 25px; } */
 }
 /* HOMEPAGE - MAIN SECTIONS == from 600 to 1200 ---  */
 @media only screen and (min-width: 601px)  {
@@ -51,12 +48,11 @@
 }
 /* HOMEPAGE - MAIN SECTIONS == 1200 and up ---  */
 @media only screen and (min-width: 1201px) {
-    body { background-color: #cbcbcb;}
-    .main-content-wrapper { background-color: #f6f6f6; }
-    .main-content-wrapper,
-    /* footer-nav-wrapper  
-/*  .nav__wrapper  { width: 80%; 
-    @include mlmr-auto; }*/ 
+    body { background-color: $mediumgrey;}
+    .main-content-wrapper { background-color: $lightgrey; }
+    .main-content-wrapper 
+        /* =FYI= .nav__wrapper (footer) */
+        { width: 80%; @include mlmr-auto; }
 
     /* all sections titles  */
     h2 { text-align: center;}
@@ -88,7 +84,6 @@
             input[placeholder]{ font-size:14px; }}  /* =====>>>>>>  */
     }
 }
-/* .search-bar-wrapper .input-container > input[placeholder]{text-align: center; }*/
 
 /* EXPLORE btn == any device  ===== */
 .main-btn-wrapper { margin-top:20px;margin-bottom:10px; }
@@ -98,20 +93,16 @@
 /* EXPLORE search-bar  == from 600 : search-bar goes below explore btn --- */
 @media only screen and (min-width: 601px) { 
     .explore-section { display: flex; flex-flow: column nowrap; }
-    .search-bar-wrapper { order:2; }
+    .search-bar { order:2; }
 } 
 
-/* EXPLORE search-bar  == from 600 to 1200 : search-bar below explore btn = is forced upwards --- */
-@media only screen and (min-width: 601px) and (max-width: 1299px) { 
-   /*  .search-bar-wrapper { transform: translate(0, -30px);} */
-}
 /* EXPLORE search-bar  == from 768 to  1200 --- */
 @media only screen and (min-width: 768px) and (max-width: 1199px) { 
-    .search-bar-wrapper { width:80%; margin:10px auto; } 
+    .search-bar { width:80%; margin:10px auto; } 
 }
 /* EXPLORE search-bar  == 1200 and up --- */
 @media only screen and (min-width: 1200px) { 
-    .search-bar-wrapper { width:60%; margin:35px auto; } 
+    .search-bar { width:60%; margin:35px auto; } 
 }
 
 /* EXPLORE TEXT === up to 600  ----  */
@@ -127,7 +118,7 @@
 @media only screen and (min-width: 1201px) {
 
     .explore-section { display: flex; flex-flow: column nowrap; }
-    .search-bar-wrapper { order:2; } /* search-bar goes below explore btn */
+    .search-bar { order:2; } /* search-bar goes below explore btn */
 
     .explore-elements-wrapper { padding-bottom: 0;}
     .explore-elements-wrapper h1,
