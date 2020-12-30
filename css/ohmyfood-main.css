@@ -41,6 +41,9 @@
 /* ======================================== */
 /* PADDINGS  */
 /* ======================================== */
+/* ======================================== */
+/* SIZE */
+/* ======================================== */
 /* ================================== */
 /* Fonts */
 /* ================================== */
@@ -192,11 +195,7 @@ ul li {
 /* =============================================== */
 /* ===  HOMEPAGE -  MAIN SECTIONS === */
 /* =============================================== */
-/* ======================================== */
-/* STRUCTURE MAIN RESPONSIVE BLOCS */
-/* ======================================== */
 /* ===  HOMEPAGE -  MAIN SECTIONS COMMON RULES === */
-/* =============================================== */
 /* HOMEPAGE - MAIN SECTIONS == any device  ===== */
 /* all sections content */
 .explore-elements-wrapper,
@@ -216,8 +215,7 @@ ul li {
   margin-right: auto;
 }
 
-/* footer-nav-wrapper => in _footer.scss */
-/* .nav__wrapper {  
+/* =FYI=  .nav__wrapper {  
     @include mlmr-auto;
     padding-top: 25px; } */
 /* HOMEPAGE - MAIN SECTIONS == up to 600 ---  */
@@ -270,7 +268,6 @@ h2 {
     text-align: center;
   }
 }
-/* ====== */
 /* EXPLORE SECTION ===== */
 /* ===================== */
 /* EXPLORE SECTION ELEMENTS  == any device  ===== */
@@ -441,6 +438,7 @@ h2 {
 /* RESULTS SECTION == from 600 and up : results on rows ---  */
 @media only screen and (min-width: 600px) {
   .results-section--cards-wrapper {
+    /* @include flex(row, nowrap); */
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -465,4 +463,4 @@ h2 {
   }
 }
 
-/*# sourceMappingURL=ohmyfood-homepage.css.map */
+/*# sourceMappingURL=ohmyfood-main.css.map */
