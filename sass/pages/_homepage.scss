@@ -3,14 +3,7 @@
 /* =============================================== */
 
 
-/* ======================================== */
-/* STRUCTURE MAIN RESPONSIVE BLOCS */
-/* ======================================== */
-
-
 /* ===  HOMEPAGE -  MAIN SECTIONS COMMON RULES === */
-/* =============================================== */
-
 /* HOMEPAGE - MAIN SECTIONS == any device  ===== */
 /* all sections content */
 .explore-elements-wrapper,
@@ -23,9 +16,7 @@
 .explore-elements-wrapper * { 
     @include mlmr-auto;
 }
-
-/* footer-nav-wrapper => in _footer.scss */
-/* .nav__wrapper {  
+/* =FYI=  .nav__wrapper {  
     @include mlmr-auto;
     padding-top: 25px; } */
 
@@ -48,8 +39,6 @@
     /* footer-nav-wrapper  */
     /* .nav__wrapper { width: 90%; padding-top: 25px; } */
 }
-
-
 /* HOMEPAGE - MAIN SECTIONS == from 600 to 1200 ---  */
 @media only screen and (min-width: 601px)  {
     /* all sections content */
@@ -60,7 +49,6 @@
         padding-bottom:35px;
     }
 }
-
 /* HOMEPAGE - MAIN SECTIONS == 1200 and up ---  */
 @media only screen and (min-width: 1201px) {
     body { background-color: #cbcbcb;}
@@ -73,9 +61,6 @@
     /* all sections titles  */
     h2 { text-align: center;}
 } 
-
-/* ====== */
-
 
 
 /* EXPLORE SECTION ===== */
@@ -120,30 +105,24 @@
 @media only screen and (min-width: 601px) and (max-width: 1299px) { 
    /*  .search-bar-wrapper { transform: translate(0, -30px);} */
 }
-
 /* EXPLORE search-bar  == from 768 to  1200 --- */
 @media only screen and (min-width: 768px) and (max-width: 1199px) { 
     .search-bar-wrapper { width:80%; margin:10px auto; } 
 }
-
-
 /* EXPLORE search-bar  == 1200 and up --- */
 @media only screen and (min-width: 1200px) { 
     .search-bar-wrapper { width:60%; margin:35px auto; } 
 }
-
 
 /* EXPLORE TEXT === up to 600  ----  */
 @media only screen and (max-width: 600px) {
     .explore-elements-wrapper h1 { width: 230px;}
     .explore-elements-wrapper p { width: 300px;}
 }
-
 /* EXPLORE SECTION == from 600 and up --- */
 @media only screen and (min-width: 601px) {
     .explore-elements-wrapper { width: 100%; }
 }
-
 /* EXPLORE SECTION == 1200 and up --- */
 @media only screen and (min-width: 1201px) {
 
@@ -166,7 +145,6 @@
 /*  HOW SECTION  == any device  =====  */
 .how-section--card {height: 75px; border:2px solid pink; background-color: #f6f6f6;  }
 
-
 /*  HOW SECTION == from 600 to 768 ---  */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
     .how-section--wrapper { width: 80%; margin:auto;}
@@ -175,7 +153,6 @@
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
     .how-section--wrapper { width: 60%; margin:auto;}
 }
-
 /*  HOW SECTION == 1200 and up ---  */
 @media only screen and (min-width: 1201px) {
     .how-section { width: 95%; margin: auto; }
@@ -186,27 +163,24 @@
 /* RESULTS SECTION */
 /* ===================== */
 
-
 /* RESULTS SECTION == any device  =====   */
 .results-section--card { 
     height:250px;
     border: 2px solid violet;
     a { display: block; @include h100w100; }
 }
-
-
 /* RESULTS SECTION == from 600 and up : results on rows ---  */
 @media only screen and (min-width: 600px) { 
     .results-section--cards-wrapper { 
-        display: flex; flex-flow: row wrap; justify-content: space-between;
+        /* @include flex(row, nowrap); */
+        display: flex; flex-flow: row wrap; 
+        justify-content: space-between;
     }
 }
-
 /* RESULTS SECTION == from 600 to 1200 : results on rows of 2 ---  */
 @media only screen and (min-width: 601px) and (max-width: 1199px) {
     .results-section--card { flex-basis: 50%; }
 }
-
 /* RESULTS SECTION == 1200 and up : results on rows of 4 ---  */
 @media only screen and (min-width: 1200px) {
     .results-section--cards-wrapper { 
