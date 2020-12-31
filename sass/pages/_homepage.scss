@@ -220,10 +220,12 @@
         figure {
             @include h100w100;
             margin: 0;
+            overflow: hidden;
             img { 
                 background-color:lavender;
                 @include h100w100;
                 object-fit: cover;
+                object-position: bottom;
                 display: block;
                 overflow: hidden;}
                 figcaption {  
