@@ -122,7 +122,9 @@ $wrap: ( wrap:wrap, nwrap:nowrap );
     justify-content: center;
     align-items: center;
 }
-@mixin icon-size { font-size: 1.3rem; }
+@mixin icon-size( $size: 1.3rem ) { 
+    font-size: $size;
+}
 
 
 
