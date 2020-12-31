@@ -136,19 +136,21 @@
 .how-section {
     @include min-1200px { width: 95%; margin: auto; }
     &__wrapper {
-        @include min600px-max768px { width: 80%; margin:auto;}
-        @include min768px-max1200px { width: 60%; margin:auto; }
-        @include min-1200px { width: 50%; margin:auto; }
+        @include min600px-max768px { width: 80%; margin:auto;} /* =====>>>>>>  */
+        @include min768px-max1200px { width: 60%; margin:auto; } /* =====>>>>>>  */
+        @include min-1200px { width: 50%; margin:auto; } /* =====>>>>>>  */
     }
+    &__cards-wrapper { width: 90%; margin: auto; }  /* =====>>>>>>  */
     &__card { 
         position: relative;
         border:2px solid pink;
         height: 75px;
         background-color: $lightgrey;
         margin-bottom: 20px;            /* =====>>>>>>  */
+        
         .card-elements { 
             background-color: lightyellow;
-            margin: 15px auto;   /* =====>>>>>>  */
+            margin: 25px auto;   /* =====>>>>>>  */
             height:25px;
             display: flex; flex-flow: row nowrap;  /* =====>>>>>>  */
             .card-number { 
@@ -162,9 +164,13 @@
             .card-icon {
                 background-color:yellow;
                 width: 35px; height: 25px;
-                margin: auto 15px;
+                margin: auto 25px;
                 @include icon-base;
-            
+                .fas { @include icon-size; }
+            }
+            .card-txt { 
+                min-width: 175px;
+                p { margin:0; padding: 1%;}
             }
         }
     }

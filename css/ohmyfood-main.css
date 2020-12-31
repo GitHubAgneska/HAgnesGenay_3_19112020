@@ -417,11 +417,19 @@ ul li {
 }
 /*  HOW SECTION  */
 /* ============= */
+.how-section {
+  /* =====>>>>>>  */
+}
 @media screen and (min-width: 1199px) {
   .how-section {
     width: 95%;
     margin: auto;
   }
+}
+.how-section__wrapper {
+  /* =====>>>>>>  */
+  /* =====>>>>>>  */
+  /* =====>>>>>>  */
 }
 @media screen and (min-width: 599px) and (max-width: 767px) {
   .how-section__wrapper {
@@ -441,6 +449,10 @@ ul li {
     margin: auto;
   }
 }
+.how-section__cards-wrapper {
+  width: 90%;
+  margin: auto;
+}
 .how-section__card {
   position: relative;
   border: 2px solid pink;
@@ -451,7 +463,7 @@ ul li {
 }
 .how-section__card .card-elements {
   background-color: lightyellow;
-  margin: 15px auto;
+  margin: 25px auto;
   /* =====>>>>>>  */
   height: 25px;
   display: flex;
@@ -471,13 +483,24 @@ ul li {
   align-items: center;
 }
 .how-section__card .card-elements .card-icon {
+  background-color: yellow;
   width: 35px;
   height: 25px;
-  margin: auto 15px;
+  margin: auto 25px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+}
+.how-section__card .card-elements .card-icon .fas {
+  font-size: 1.3rem;
+}
+.how-section__card .card-elements .card-txt {
+  min-width: 175px;
+}
+.how-section__card .card-elements .card-txt p {
+  margin: 0;
+  padding: 1%;
 }
 
 /* RESULTS SECTION */
