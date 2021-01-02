@@ -22,11 +22,10 @@ html {
 }
 body { 
     margin: auto;
-    font-family:'Roboto-regular', Arial, Helvetica, sans-serif;
     background-color: #eaeaea; /* search-bar default color with shadow of header */
 }
 
-a { text-decoration: none; }
+a { text-decoration: none; color: unset; }
 input { border: transparent; background-color: inherit;}
 ul { margin: 0; padding: 0;}
 ul li { list-style: none; }

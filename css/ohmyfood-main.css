@@ -58,27 +58,27 @@
 }
 @font-face {
   font-family: "Roboto-thin";
-  src: url("assets/fonts/roboto/roboto-thin.ttf") format("ttf");
-  src: url("assets/fonts/roboto/roboto-thin.eot") format("eot");
-  src: url("assets/fonts/roboto/roboto-thin.woff") format("woff");
+  src: url("../assets/fonts/roboto/roboto-thin.ttf") format("ttf");
+  src: url("../assets/fonts/roboto/roboto-thin.eot") format("eot");
+  src: url("../assets/fonts/roboto/roboto-thin.woff") format("woff");
 }
 @font-face {
   font-family: "Roboto-regular";
-  src: url("assets/fonts/roboto/roboto-regular.ttf") format("ttf");
-  src: url("assets/fonts/roboto/roboto-regular.eot") format("eot");
-  src: url("assets/fonts/roboto/roboto-regular.woff") format("woff");
+  src: url("../assets/fonts/roboto/roboto-regular.ttf") format("ttf");
+  src: url("../assets/fonts/roboto/roboto-regular.eot") format("eot");
+  src: url("../assets/fonts/roboto/roboto-regular.woff") format("woff");
 }
 @font-face {
   font-family: "Roboto-medium";
-  src: url("assets/fonts/roboto/roboto-medium.ttf") format("ttf");
-  src: url("assets/fonts/roboto/roboto-medium.eot") format("eot");
-  src: url("assets/fonts/roboto/roboto-medium.woff") format("woff");
+  src: url("../assets/fonts/roboto/roboto-medium.ttf") format("ttf");
+  src: url("../assets/fonts/roboto/roboto-medium.eot") format("eot");
+  src: url("../assets/fonts/roboto/roboto-medium.woff") format("woff");
 }
 @font-face {
   font-family: "Roboto-bold";
-  src: url("assets/fonts/roboto/roboto-bold.ttf") format("ttf");
-  src: url("assets/fonts/roboto/roboto-bold.eot") format("eot");
-  src: url("assets/fonts/roboto/roboto-bold.woff") format("woff");
+  src: url("../assets/fonts/roboto/roboto-bold.ttf") format("ttf");
+  src: url("../assets/fonts/roboto/roboto-bold.eot") format("eot");
+  src: url("../assets/fonts/roboto/roboto-bold.woff") format("woff");
 }
 /* ================================== */
 /* General rules */
@@ -102,13 +102,14 @@ html {
 
 body {
   margin: auto;
-  font-family: "Roboto-regular", Arial, Helvetica, sans-serif;
+  /* font-family:'Roboto-regular', Arial, Helvetica, sans-serif; */
   background-color: #eaeaea;
   /* search-bar default color with shadow of header */
 }
 
 a {
   text-decoration: none;
+  color: unset;
 }
 
 input {
@@ -225,6 +226,14 @@ ul li {
 /* =============================================== */
 /* ===  HOMEPAGE -  MAIN SECTIONS === */
 /* =============================================== */
+/* HOMEPAGE FONTS RULES  */
+.main-content-wrapper.homepage h1, .main-content-wrapper.homepage h2, .main-content-wrapper.homepage h3, .main-content-wrapper.homepage p {
+  font-family: "Roboto-medium";
+}
+.main-content-wrapper.homepage h4 {
+  font-family: "Roboto-thin";
+}
+
 /* ===  HOMEPAGE -  MAIN SECTIONS COMMON RULES === */
 /* HOMEPAGE - MAIN SECTIONS == any device  ===== */
 /* all sections content */
@@ -561,6 +570,7 @@ ul li {
   height: 100%;
   width: 100%;
   margin: 0;
+  overflow: hidden;
 }
 .results-section__card figure img {
   background-color: lavender;
