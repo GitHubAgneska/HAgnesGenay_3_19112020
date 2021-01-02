@@ -13,9 +13,7 @@
     /* dish types */
     h2 { 
         font-family: map-get($font-families, rob-thin);
-        font-variant: small-caps;
-        
-    }
+        font-variant: small-caps;}
     /* dish names */
     h3 { font-family: map-get($font-families, rob-medium);  font-weight: normal;}
     /* dish subtitle + price  */
@@ -33,8 +31,6 @@
         border-bottom: 3px solid $tertiary;
         left:0;
         top: 30px;
-
-    
     }
 }
 
@@ -127,13 +123,7 @@
 
 
 
-
-
-
-
-
-/* MENU PAGE - ORDER Section (order btn) == any device  =====*/
-.order-btn-wrapper { 
-    width: 20%;
-    margin: 20px auto; 
-}
+/*  MENU PAGE - ORDER Section */
+.order {     
+    width: 90%;
+    margin-left: auto; margin-right: auto;}

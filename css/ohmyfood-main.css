@@ -11,6 +11,7 @@
 /* SPECIFICS =================> use functions instead */
 /* lightgrey2 => MOBILE => search bar */
 /* grey search icon + placeholder */
+/* BTN gradient */
 /* 
 - icons 
 <i class="far fa-heart"></i>
@@ -125,7 +126,23 @@ ul li {
   list-style: none;
 }
 
-/* @import "../sass/components/buttons"; */
+/* EXPLORE btn == any device  ===== */
+.main-btn-wrapper {
+  max-width: 50%;
+  margin: 20px auto;
+  /*  margin-top:20px;margin-bottom:10px; */
+}
+.main-btn-wrapper .main-btn {
+  height: 50px;
+  display: block;
+  border-radius: 50px;
+  border: none;
+  padding: 0% 12%;
+  background: linear-gradient(170deg, #ff79da 0%, #9356dc 80%);
+  color: #fff;
+  font-size: 1rem;
+}
+
 .header {
   position: relative;
   height: 60px;
@@ -354,17 +371,6 @@ ul li {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-}
-
-/* EXPLORE btn == any device  ===== */
-.main-btn-wrapper {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.main-btn {
-  height: 50px;
-  display: block;
 }
 
 /* EXPLORE search-bar  == from 600 : search-bar goes below explore btn --- */
@@ -796,10 +802,11 @@ ul li {
   background-color: yellow;
 }
 
-/* MENU PAGE - ORDER Section (order btn) == any device  =====*/
-.order-btn-wrapper {
-  width: 20%;
-  margin: 20px auto;
+/*  MENU PAGE - ORDER Section */
+.order {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=ohmyfood-main.css.map */
