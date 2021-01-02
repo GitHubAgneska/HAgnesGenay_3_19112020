@@ -1,17 +1,25 @@
+
+@use "sass:map";
+/* =============================================== */
+/* HOMEPAGE FONTS RULES  */
+/* =============================================== */
+.main-content-wrapper.homepage {
+    h1, h2, h3, p { font-family: map-get($font-families, rob-medium);}
+    
+    /* -- exceptions / specials --- */
+    /* result place */
+    h3 span { font-family: map-get($font-families, rob-thin);}
+    /* explore subtitle */
+    .explore-elements-wrapper p { font-family: map-get($font-families, rob-thin);}
+    /* searchbar input */
+    .input-container { input[placeholder]{ font-size:14px;font-family: map-get($font-families, rob-medium);}}
+    /* result card - 'new' tag */
+    .new-tag p { color: darken($tertiary, 40%); }
+}
+
 /* =============================================== */
 /* ===  HOMEPAGE -  MAIN SECTIONS === */
 /* =============================================== */
-
-@use "sass:map";
-/* HOMEPAGE FONTS RULES  */
-
-.main-content-wrapper.homepage {
-
-    h1, h2, h3, p { font-family: map-get($font-families, rob-medium);}
-    h4 { font-family: map-get($font-families, rob-thin);}
-
-}
-
 
 /* ===  HOMEPAGE -  MAIN SECTIONS COMMON RULES === */
 /* HOMEPAGE - MAIN SECTIONS == any device  ===== */
@@ -90,10 +98,7 @@
             justify-content: center;
             align-items: center;
         }
-        .input-container {
-            input[placeholder]{ font-size:14px; }}  /* =====>>>>>>  */
-    }
-}
+}}
 
 /* EXPLORE btn == any device  ===== */
 .main-btn-wrapper { margin-top:20px;margin-bottom:10px; }
@@ -215,7 +220,7 @@
             width: 80px; height: 30px;
             top: 15px;
             right:10px;
-            background-color: green; 
+            background-color: $tertiary; 
             @include icon-base;   /* =====>>>>>> IS 'center element' */
             p { margin: 0;}
         }
@@ -279,6 +284,4 @@
     }
     .results-section__card { flex-basis: 24%; }
 }
-
-
 
