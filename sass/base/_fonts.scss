@@ -7,9 +7,9 @@ $font-families: ( shrink:'Shrinkhand-regular', rob-thin:'Roboto-thin', rob-reg: 
 
 @font-face { 
     font-family:'Shrinkhand-regular';
-    src: url('assets/fonts/shrinkhand/shrinkhand-regular.ttf') format('ttf');
-    src: url('assets/fonts/shrinkhand/shrinkhand-regular.eot') format('eot');
-    src: url('assets/fonts/shrinkhand/shrinkhand-regular.woff') format('woff');
+    src: url('../assets/fonts/shrinkhand/shrinkhand-regular.ttf') format('ttf');
+    src: url('../assets/fonts/shrinkhand/shrinkhand-regular.eot') format('eot');
+    src: url('../assets/fonts/shrinkhand/shrinkhand-regular.woff') format('woff');
 }
 @font-face { 
     font-family:'Roboto-thin';

@@ -52,9 +52,9 @@
 /* ================================== */
 @font-face {
   font-family: "Shrinkhand-regular";
-  src: url("assets/fonts/shrinkhand/shrinkhand-regular.ttf") format("ttf");
-  src: url("assets/fonts/shrinkhand/shrinkhand-regular.eot") format("eot");
-  src: url("assets/fonts/shrinkhand/shrinkhand-regular.woff") format("woff");
+  src: url("../assets/fonts/shrinkhand/shrinkhand-regular.ttf") format("ttf");
+  src: url("../assets/fonts/shrinkhand/shrinkhand-regular.eot") format("eot");
+  src: url("../assets/fonts/shrinkhand/shrinkhand-regular.woff") format("woff");
 }
 @font-face {
   font-family: "Roboto-thin";
@@ -227,6 +227,7 @@ ul li {
 /* =============================================== */
 .main-content-wrapper.homepage {
   /* -- exceptions / specials --- */
+  /* result place */
   /* explore subtitle */
   /* searchbar input */
   /* result card - 'new' tag */
@@ -243,7 +244,6 @@ ul li {
 .main-content-wrapper.homepage .input-container input[placeholder] {
   font-size: 14px;
   font-family: "Roboto-medium";
-  opacity: 1 !important;
 }
 .main-content-wrapper.homepage .new-tag p {
   color: #278870;
@@ -638,6 +638,43 @@ ul li {
     flex-basis: 24%;
   }
 }
+/* =============================================== */
+/* MENUPAGE - FONTS RULES  */
+/* =============================================== */
+.main-content-wrapper.menupage {
+  /* dish types */
+  /* dish names */
+  /* dish subtitle + price  */
+  /* dish price */
+  /* -- exceptions / specials --- */
+}
+.main-content-wrapper.menupage h1 {
+  font-family: "Shrinkhand-regular";
+  font-size: 2em;
+  font-weight: normal;
+  color: black;
+}
+@media screen and (min-width: 599px) {
+  .main-content-wrapper.menupage h1 {
+    font-size: 2.5em;
+  }
+}
+.main-content-wrapper.menupage h2 {
+  font-family: "Roboto-thin";
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+.main-content-wrapper.menupage h3 {
+  font-family: "Roboto-medium";
+  font-weight: normal;
+}
+.main-content-wrapper.menupage h4 {
+  font-family: "Roboto-thin";
+}
+.main-content-wrapper.menupage .dish-card-txt-details h4:nth-child(2) {
+  font-family: "Roboto-medium";
+}
+
 /* ======================================== */
 /* MENU PAGES -  MAIN SECTIONS === */
 /* ======================================== */
@@ -665,6 +702,7 @@ ul li {
   background-color: #f6f6f6;
   position: relative;
   top: -60px;
+  padding-top: 20px;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
 }
@@ -673,6 +711,18 @@ ul li {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+}
+.menu-elements-wrapper .menu-name-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.menu-elements-wrapper .menu-name-wrapper .heart-icon {
+  font-size: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-bloc h2 {

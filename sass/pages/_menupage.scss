@@ -1,5 +1,30 @@
+@use "sass:map";
+/* =============================================== */
+/* MENUPAGE - FONTS RULES  */
+/* =============================================== */
+.main-content-wrapper.menupage {
+    h1 { 
+        font-family: map-get($font-families, shrink );
+        font-size: 2em;
+        font-weight: normal;
+        color: black;
+        @include min-600px { font-size: 2.5em;}
+    }
+    /* dish types */
+    h2 { 
+        font-family: map-get($font-families, rob-thin);
+        text-transform: uppercase;
+        font-size: 1.2em;
+    }
+    /* dish names */
+    h3 { font-family: map-get($font-families, rob-medium);  font-weight: normal;}
+    /* dish subtitle + price  */
+    h4 { font-family: map-get($font-families, rob-thin); }
+    /* dish price */
+    .dish-card-txt-details h4:nth-child(2) {font-family: map-get($font-families, rob-medium); }
 
-
+    /* -- exceptions / specials --- */
+}
 
 /* ======================================== */
 /* MENU PAGES -  MAIN SECTIONS === */
@@ -27,12 +52,21 @@
         background-color: #f6f6f6; 
         position: relative;
         top: -60px;
+        padding-top: 20px;
         border-top-right-radius: 50px;
         border-top-left-radius: 50px;
 }
 .menu-elements-wrapper{
     width: 90%;
     margin-left: auto; margin-right: auto;
+    .menu-name-wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        .heart-icon {
+            @include icon-size(2rem);
+            @include icon-base; }
+    }
 }
 .menu-bloc h2 { 
     font-variant: small-caps;
