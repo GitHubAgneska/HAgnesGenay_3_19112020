@@ -13,8 +13,8 @@
     /* dish types */
     h2 { 
         font-family: map-get($font-families, rob-thin);
-        text-transform: uppercase;
-        font-size: 1.2em;
+        font-variant: small-caps;
+        
     }
     /* dish names */
     h3 { font-family: map-get($font-families, rob-medium);  font-weight: normal;}
@@ -24,6 +24,18 @@
     .dish-card-txt-details h4:nth-child(2) {font-family: map-get($font-families, rob-medium); }
 
     /* -- exceptions / specials --- */
+    /* dish types underlining  */
+    .menu-bloc { position: relative;}
+    .menu-bloc h2::after { 
+        width: 40px;
+        position: absolute;
+        content:'';
+        border-bottom: 3px solid $tertiary;
+        left:0;
+        top: 30px;
+
+    
+    }
 }
 
 /* ======================================== */
@@ -68,11 +80,9 @@
             @include icon-base; }
     }
 }
-.menu-bloc h2 { 
-    font-variant: small-caps;
-   /*  border-bottom: 5px solid green; */ }
 
-.menu-bloc h2::after { border: 4px solid pink;}
+
+
 
 
 /* MENU PAGE - MENU Section -> DISH CARDS  == any device  ===== */

@@ -647,6 +647,7 @@ ul li {
   /* dish subtitle + price  */
   /* dish price */
   /* -- exceptions / specials --- */
+  /* dish types underlining  */
 }
 .main-content-wrapper.menupage h1 {
   font-family: "Shrinkhand-regular";
@@ -661,8 +662,7 @@ ul li {
 }
 .main-content-wrapper.menupage h2 {
   font-family: "Roboto-thin";
-  text-transform: uppercase;
-  font-size: 1.2em;
+  font-variant: small-caps;
 }
 .main-content-wrapper.menupage h3 {
   font-family: "Roboto-medium";
@@ -673,6 +673,17 @@ ul li {
 }
 .main-content-wrapper.menupage .dish-card-txt-details h4:nth-child(2) {
   font-family: "Roboto-medium";
+}
+.main-content-wrapper.menupage .menu-bloc {
+  position: relative;
+}
+.main-content-wrapper.menupage .menu-bloc h2::after {
+  width: 40px;
+  position: absolute;
+  content: "";
+  border-bottom: 3px solid #99E2D0;
+  left: 0;
+  top: 30px;
 }
 
 /* ======================================== */
@@ -723,15 +734,6 @@ ul li {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-}
-
-.menu-bloc h2 {
-  font-variant: small-caps;
-  /*  border-bottom: 5px solid green; */
-}
-
-.menu-bloc h2::after {
-  border: 4px solid pink;
 }
 
 /* MENU PAGE - MENU Section -> DISH CARDS  == any device  ===== */
