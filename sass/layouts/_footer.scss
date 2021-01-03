@@ -10,10 +10,19 @@
         @include max-1200px { width: 90%; }
         @include min-1200px { width: 80%; }
         p { margin: 0.5em 0 0 0; color: $white; }
-        ul { @include min-600px {
+        ul { 
+            @include min-600px {
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: space-between; }
+            /* icon + text = online */
+            li a i, li a p { display: inline-block; }
+            li a i { color: $white;}
+            i.fas { width: 15px; margin-left: 5px; }
+            li a p  {padding: 0px 5px;}
+            /* fonts */
+            li:nth-child(1),li:nth-child(2) { font-family: map-get($font-families, rob-medium);}
+            li:nth-child(3),li:nth-child(4) { font-family: map-get($font-families, rob-reg);}
         }
     }
     &__logo-wrapper { margin: 0 0 1em 0; img { max-width: 100px; } }

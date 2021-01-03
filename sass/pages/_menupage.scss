@@ -14,10 +14,13 @@
     h2 { 
         font-family: map-get($font-families, rob-thin);
         font-variant: small-caps;}
+
     /* dish names */
     h3 { font-family: map-get($font-families, rob-medium);  font-weight: normal;}
-    /* dish subtitle + price  */
+    
+    /* dish subtitle  */
     h4 { font-family: map-get($font-families, rob-thin); }
+
     /* dish price */
     .dish-card-txt-details h4:nth-child(2) {font-family: map-get($font-families, rob-medium); }
 

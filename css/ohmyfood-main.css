@@ -12,15 +12,6 @@
 /* lightgrey2 => MOBILE => search bar */
 /* grey search icon + placeholder */
 /* BTN gradient */
-/* 
-- icons 
-<i class="far fa-heart"></i>
-<i class="fas fa-mobile-alt"></i>
-<i class="fas fa-list-ul"></i>
-<i class="fas fa-store"></i>
-<i class="fas fa-utensils"></i>
-<i class="fas fa-hands-helping"></i>
-*/
 /* ======================================== */
 /* BREAKPOINTS*/
 /* ======================================== */
@@ -126,18 +117,20 @@ ul li {
   list-style: none;
 }
 
+button {
+  display: block;
+  border: none;
+  cursor: pointer;
+}
+
 /* EXPLORE btn == any device  ===== */
 .main-btn-wrapper {
-  max-width: 50%;
   margin: 20px auto;
-  /*  margin-top:20px;margin-bottom:10px; */
 }
 .main-btn-wrapper .main-btn {
   height: 50px;
-  display: block;
-  border-radius: 50px;
-  border: none;
   padding: 0% 12%;
+  border-radius: 50px;
   background: linear-gradient(170deg, #ff79da 0%, #9356dc 80%);
   color: #fff;
   font-size: 1rem;
@@ -225,12 +218,34 @@ ul li {
   margin: 0.5em 0 0 0;
   color: #fff;
 }
+.nav__wrapper ul {
+  /* icon + text = online */
+}
 @media screen and (min-width: 599px) {
   .nav__wrapper ul {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
   }
+}
+.nav__wrapper ul li a i, .nav__wrapper ul li a p {
+  display: inline-block;
+}
+.nav__wrapper ul li a i {
+  color: #fff;
+}
+.nav__wrapper ul i.fas {
+  width: 15px;
+  margin-left: 5px;
+}
+.nav__wrapper ul li a p {
+  padding: 0px 5px;
+}
+.nav__wrapper ul li:nth-child(1), .nav__wrapper ul li:nth-child(2) {
+  font-family: "Roboto-medium";
+}
+.nav__wrapper ul li:nth-child(3), .nav__wrapper ul li:nth-child(4) {
+  font-family: "Roboto-regular";
 }
 .nav__logo-wrapper {
   margin: 0 0 1em 0;
@@ -650,7 +665,7 @@ ul li {
 .main-content-wrapper.menupage {
   /* dish types */
   /* dish names */
-  /* dish subtitle + price  */
+  /* dish subtitle  */
   /* dish price */
   /* -- exceptions / specials --- */
   /* dish types underlining  */
