@@ -369,104 +369,104 @@ button {
 }
 /* EXPLORE SECTION ===== */
 /* ===================== */
-/* EXPLORE SECTION ELEMENTS  == any device  ===== */
-.explore-elements-wrapper {
-  text-align: center;
+@media screen and (min-width: 599px) {
+  .explore-section {
+    display: flex;
+    flex-flow: column nowrap;
+  }
 }
-
-/* search-bar == any device  ===== */
-.search-bar__elements-container {
+@media screen and (min-width: 1199px) {
+  .explore-section {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+.explore-section .search-bar {
+  /* from 600 search-bar goes below explore btn */
+}
+@media screen and (min-width: 599px) {
+  .explore-section .search-bar {
+    order: 2;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .explore-section .search-bar {
+    width: 80%;
+    margin: 10px auto;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .explore-section .search-bar {
+    width: 95%;
+    margin: 35px auto;
+    background-color: #eaeaea;
+  }
+}
+.explore-section .search-bar__elements-container {
   display: flex;
   flex-flow: row nowrap;
   /* =====>>>>>>  */
   justify-content: center;
   padding: 15px 0px 15px 50px;
 }
-.search-bar__elements-container .icon, .search-bar__elements-container .input-container {
+.explore-section .search-bar__elements-container .icon, .explore-section .search-bar__elements-container .input-container {
   height: 20px;
 }
-.search-bar__elements-container .icon {
+.explore-section .search-bar__elements-container .icon {
   width: 20px;
-  /* center icon inside its container */
-  /* =====>>>>>>  */
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
-
-/* EXPLORE search-bar  == from 600 : search-bar goes below explore btn --- */
-@media only screen and (min-width: 601px) {
-  .explore-section {
-    display: flex;
-    flex-flow: column nowrap;
-  }
-
-  .search-bar {
-    order: 2;
-  }
+.explore-section .explore-elements-wrapper {
+  text-align: center;
 }
-/* EXPLORE search-bar  == from 768 to  1200 --- */
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-  .search-bar {
-    width: 80%;
-    margin: 10px auto;
-  }
-}
-/* EXPLORE search-bar  == 1200 and up --- */
-@media only screen and (min-width: 1200px) {
-  .search-bar {
-    width: 95%;
-    margin: 35px auto;
-    background-color: #eaeaea;
-  }
-}
-/* EXPLORE TEXT === up to 600  ----  */
-@media only screen and (max-width: 600px) {
-  .explore-elements-wrapper h1 {
-    width: 230px;
-  }
-
-  .explore-elements-wrapper p {
-    width: 300px;
-  }
-}
-/* EXPLORE SECTION == from 600 and up --- */
-@media only screen and (min-width: 601px) {
-  .explore-elements-wrapper {
+@media screen and (min-width: 599px) {
+  .explore-section .explore-elements-wrapper {
     width: 100%;
   }
 }
-/* EXPLORE SECTION == 1200 and up --- */
-@media only screen and (min-width: 1201px) {
-  .explore-section {
-    display: flex;
-    flex-flow: column nowrap;
-  }
-
-  .search-bar {
-    order: 2;
-  }
-
-  /* search-bar goes below explore btn */
-  .explore-elements-wrapper {
+@media screen and (min-width: 1199px) {
+  .explore-section .explore-elements-wrapper {
     padding-bottom: 0;
   }
-
-  .explore-elements-wrapper h1,
-.explore-elements-wrapper p {
-    width: unset;
+}
+@media screen and (max-width: 599px) {
+  .explore-section h1 {
+    width: 230px;
   }
-
-  /* one-liners  */
-  .explore-elements-wrapper h1 {
+}
+@media screen and (min-width: 1199px) {
+  .explore-section h1 {
+    width: unset;
     margin-bottom: 0;
   }
-
-  .explore-elements-wrapper p {
+}
+@media screen and (max-width: 599px) {
+  .explore-section p {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .explore-section p {
+    width: unset;
     margin-top: 0;
   }
 }
+
+/* EXPLORE TEXT === up to 600  ----  */
+/* @media only screen and (max-width: 600px) { */
+/*  .explore-elements-wrapper h1 { width: 230px;} */
+/*  .explore-elements-wrapper p { width: 300px;} */
+/* EXPLORE SECTION == 1200 and up --- */
+/* @media only screen and (min-width: 1201px) {
+
+    .explore-elements-wrapper h1,
+    .explore-elements-wrapper p { width: unset; } */
+/* one-liners  */
+/* .explore-elements-wrapper h1 { margin-bottom: 0;} */
+/* .explore-elements-wrapper p { margin-top: 0;} */
 /*  HOW SECTION  */
 /* ============= */
 .how-section {
