@@ -101,6 +101,7 @@ body {
 a {
   text-decoration: none;
   color: unset;
+  cursor: pointer;
 }
 
 input {
@@ -220,6 +221,7 @@ button {
 }
 .nav__wrapper ul {
   /* icon + text = online */
+  /* fonts */
 }
 @media screen and (min-width: 599px) {
   .nav__wrapper ul {
@@ -499,14 +501,15 @@ button {
 }
 .how-section__card {
   position: relative;
-  border: 2px solid pink;
+  border: 2px solid transparent;
+  /* removing the border fs up layout !- > ?? */
+  border-radius: 20px;
   height: 75px;
   background-color: #f6f6f6;
   margin-bottom: 20px;
   /* =====>>>>>>  */
 }
 .how-section__card .card-elements {
-  background-color: lightyellow;
   margin: 25px auto;
   /* =====>>>>>>  */
   height: 25px;
@@ -514,20 +517,32 @@ button {
   flex-flow: row nowrap;
   /* =====>>>>>>  */
 }
+@media screen and (min-width: 599px) {
+  .how-section__card .card-elements {
+    justify-content: center;
+  }
+}
 .how-section__card .card-elements .card-number {
-  background-color: salmon;
+  background-color: #9356DC;
   width: 25px;
   height: 25px;
   position: absolute;
   transform: translateX(-17px);
   color: #fff;
+  border-radius: 50%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  font-family: "Roboto-medium";
+}
+@media screen and (min-width: 599px) {
+  .how-section__card .card-elements .card-number {
+    transform: translateX(0px);
+    left: 15%;
+  }
 }
 .how-section__card .card-elements .card-icon {
-  background-color: yellow;
   width: 35px;
   height: 25px;
   margin: auto 25px;
@@ -553,7 +568,7 @@ button {
 .results-section__card {
   height: 250px;
   position: relative;
-  border: 2px solid violet;
+  /* border: 2px solid violet; */
 }
 @media screen and (max-width: 599px) {
   .results-section__card {
@@ -599,16 +614,17 @@ button {
   right: 20px;
   width: 30px;
   height: 30px;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 .results-section__card figure {
   height: 100%;
   width: 100%;
   margin: 0;
   overflow: hidden;
+  border-radius: 15px;
 }
 .results-section__card figure img {
-  background-color: lavender;
+  /* background-color:lavender; */
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -617,7 +633,9 @@ button {
   overflow: hidden;
 }
 .results-section__card figure figcaption {
-  background-color: pink;
+  background-color: #fff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   width: 100%;
   height: 80px;
   position: absolute;

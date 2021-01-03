@@ -156,26 +156,30 @@
     &__cards-wrapper { width: 90%; margin: auto; }  /* =====>>>>>>  */
     &__card { 
         position: relative;
-        border:2px solid pink;
+        border:2px solid transparent; /* removing the border fs up layout !- > ?? */
+        border-radius: 20px;
         height: 75px;
         background-color: $lightgrey;
         margin-bottom: 20px;            /* =====>>>>>>  */
         
         .card-elements { 
-            background-color: lightyellow;
             margin: 25px auto;   /* =====>>>>>>  */
             height:25px;
             display: flex; flex-flow: row nowrap;  /* =====>>>>>>  */
+            @include min-600px { justify-content: center;}
             .card-number { 
-                background-color:salmon;
+                background-color: $primary;
                 width:25px;height:25px;
                 position:absolute;
                 transform:translateX(-17px);
                 color:$white;
+                border-radius: 50%;
                 @include icon-base;
+                font-family: map-get($font-families , rob-medium );
+                @include min-600px { transform:translateX(0px); left: 15%;}
+                @include min-1200px { }
             }
-            .card-icon {
-                background-color:yellow;
+            .card-icon {    
                 width: 35px; height: 25px;
                 margin: auto 25px;
                 @include icon-base;
@@ -202,7 +206,7 @@
     &__card {
         height:250px;
         position: relative;
-        border: 2px solid violet;
+        /* border: 2px solid violet; */
         @include max-600px { margin-bottom: 15px; }
         @include min600px-max1200px { margin-bottom: 20px; }
 
@@ -228,21 +232,24 @@
             bottom:25px;
             right:20px; 
             width:30px; height:30px;
-            background-color: yellow;
+            /* background-color: yellow; */
         }
         figure {
             @include h100w100;
             margin: 0;
             overflow: hidden;
+            border-radius: 15px;
             img { 
-                background-color:lavender;
+                /* background-color:lavender; */
                 @include h100w100;
                 object-fit: cover;
                 object-position: bottom;
                 display: block;
                 overflow: hidden;}
                 figcaption {  
-                    background-color: pink;
+                    background-color: $white;
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
                     width: 100%;
                     height: 80px;
                     position: absolute; /* =====>>>>>>  */
@@ -251,7 +258,7 @@
                     bottom: 0;
                     left:0;
                     h3 { margin-left: 15px;
-                        line-height: 1.8rem;}
+                        line-height: 1.8rem; }
                 }
         }
 

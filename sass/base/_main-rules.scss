@@ -25,7 +25,7 @@ body {
     background-color: #eaeaea; /* search-bar default color with shadow of header */
 }
 
-a { text-decoration: none; color: unset; }
+a { text-decoration: none; color: unset; cursor: pointer; }
 input { border: transparent; background-color: inherit; }
 ul { margin: 0; padding: 0;}
 ul li { list-style: none; }
