@@ -85,7 +85,6 @@
 
 .explore-section {
     @include min-600px { display: flex; flex-flow: column nowrap; }
-    @include min-1200px {  display: flex; flex-flow: column nowrap;  }
     .search-bar { 
         @include min-600px { order:2; }/* from 600 search-bar goes below explore btn */
         @include min768px-max1200px { width:80%; margin:10px auto; }
@@ -95,24 +94,21 @@
             justify-content: center;
             padding: 15px 0px 15px 50px; 
             .icon, .input-container { height: 20px; }
-            .icon { 
-                width: 20px;
-                @include icon-base;
-            }
+            .icon { width: 20px; @include icon-base; }
         }
     }
     .explore-elements-wrapper {
         text-align: center;
         @include min-600px { width: 100%; }
         @include min-1200px { padding-bottom: 0; }
-    }
-    h1 { 
-        @include max-600px { width: 230px; }
-        @include min-1200px {width: unset; margin-bottom: 0; }
-    }
-    p { 
-        @include max-600px { width: 300px; }
-        @include min-1200px { width: unset; margin-top: 0;}
+        h1 { 
+            @include max-600px { width: 230px; }
+            @include min-1200px {width: unset; margin-bottom: 0; }
+        }
+        p { 
+            @include max-600px { width: 300px; }
+            @include min-1200px { width: unset; margin-top: 0;}
+        }
     }
 }
 
@@ -176,16 +172,21 @@
 /* RESULTS SECTION */
 /* ===================== */
 
-/* RESULTS SECTION == any device  =====   */
 .results-section {
-
+    &__cards-wrapper {
+        @include min-600px {
+            /* results => rows */
+            display: flex; flex-flow: row wrap; 
+            justify-content: space-between;}
+        @include min-1200px { width:95%; margin:auto; }
+    }
     &__card {
         height:250px;
         position: relative;
         /* border: 2px solid violet; */
         @include max-600px { margin-bottom: 15px; }
-        @include min600px-max1200px { margin-bottom: 20px; }
-
+        @include min600px-max1200px { margin-bottom: 20px; flex-basis: 48%; }
+        @include min-1200px { flex-basis: 24%; }
         a { display: block; @include h100w100; }
 
         .new-tag,.heart-icon {
@@ -239,24 +240,4 @@
     }
 }
 
-
-/* RESULTS SECTION == from 600 and up : results on rows ---  */
-@media only screen and (min-width: 600px) { 
-    .results-section__cards-wrapper { 
-        /* @include flex(row, nowrap); */
-        display: flex; flex-flow: row wrap; 
-        justify-content: space-between;
-    }
-}
-/* RESULTS SECTION == from 600 to 1200 : results on rows of 2 ---  */
-@media only screen and (min-width: 601px) and (max-width: 1199px) {
-    .results-section__card { flex-basis: 48%; }
-}
-/* RESULTS SECTION == 1200 and up : results on rows of 4 ---  */
-@media only screen and (min-width: 1200px) {
-    .results-section__cards-wrapper { 
-        width:95%; margin:auto;
-    }
-    .results-section__card { flex-basis: 24%; }
-}
 

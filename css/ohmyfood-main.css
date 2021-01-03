@@ -375,12 +375,6 @@ button {
     flex-flow: column nowrap;
   }
 }
-@media screen and (min-width: 1199px) {
-  .explore-section {
-    display: flex;
-    flex-flow: column nowrap;
-  }
-}
 .explore-section .search-bar {
   /* from 600 search-bar goes below explore btn */
 }
@@ -433,40 +427,28 @@ button {
   }
 }
 @media screen and (max-width: 599px) {
-  .explore-section h1 {
+  .explore-section .explore-elements-wrapper h1 {
     width: 230px;
   }
 }
 @media screen and (min-width: 1199px) {
-  .explore-section h1 {
+  .explore-section .explore-elements-wrapper h1 {
     width: unset;
     margin-bottom: 0;
   }
 }
 @media screen and (max-width: 599px) {
-  .explore-section p {
+  .explore-section .explore-elements-wrapper p {
     width: 300px;
   }
 }
 @media screen and (min-width: 1199px) {
-  .explore-section p {
+  .explore-section .explore-elements-wrapper p {
     width: unset;
     margin-top: 0;
   }
 }
 
-/* EXPLORE TEXT === up to 600  ----  */
-/* @media only screen and (max-width: 600px) { */
-/*  .explore-elements-wrapper h1 { width: 230px;} */
-/*  .explore-elements-wrapper p { width: 300px;} */
-/* EXPLORE SECTION == 1200 and up --- */
-/* @media only screen and (min-width: 1201px) {
-
-    .explore-elements-wrapper h1,
-    .explore-elements-wrapper p { width: unset; } */
-/* one-liners  */
-/* .explore-elements-wrapper h1 { margin-bottom: 0;} */
-/* .explore-elements-wrapper p { margin-top: 0;} */
 /*  HOW SECTION  */
 /* ============= */
 .how-section {
@@ -570,7 +552,20 @@ button {
 
 /* RESULTS SECTION */
 /* ===================== */
-/* RESULTS SECTION == any device  =====   */
+@media screen and (min-width: 599px) {
+  .results-section__cards-wrapper {
+    /* from 600 and up : results on rows */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .results-section__cards-wrapper {
+    width: 95%;
+    margin: auto;
+  }
+}
 .results-section__card {
   height: 250px;
   position: relative;
@@ -584,6 +579,12 @@ button {
 @media screen and (min-width: 599px) and (max-width: 1199px) {
   .results-section__card {
     margin-bottom: 20px;
+    flex-basis: 48%;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .results-section__card {
+    flex-basis: 24%;
   }
 }
 .results-section__card a {
@@ -657,30 +658,22 @@ button {
 }
 
 /* RESULTS SECTION == from 600 and up : results on rows ---  */
-@media only screen and (min-width: 600px) {
-  .results-section__cards-wrapper {
-    /* @include flex(row, nowrap); */
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-  }
-}
+/* @media only screen and (min-width: 600px) { 
+    .results-section__cards-wrapper { 
+        display: flex; flex-flow: row wrap; 
+        justify-content: space-between;
+    }
+} */
 /* RESULTS SECTION == from 600 to 1200 : results on rows of 2 ---  */
 @media only screen and (min-width: 601px) and (max-width: 1199px) {
-  .results-section__card {
-    flex-basis: 48%;
-  }
+  /*  .results-section__card { flex-basis: 48%; } */
 }
 /* RESULTS SECTION == 1200 and up : results on rows of 4 ---  */
 @media only screen and (min-width: 1200px) {
-  .results-section__cards-wrapper {
-    width: 95%;
-    margin: auto;
-  }
-
-  .results-section__card {
-    flex-basis: 24%;
-  }
+  /*  .results-section__cards-wrapper { 
+       width:95%; margin:auto;
+   } */
+  /*  .results-section__card { flex-basis: 24%; } */
 }
 /* =============================================== */
 /* MENUPAGE - FONTS RULES  */
