@@ -668,7 +668,6 @@ button {
 /* RESULTS SECTION == 1200 and up : results on rows of 4 ---  */
 @media only screen and (min-width: 1200px) {
   .results-section__cards-wrapper {
-    background-color: lightblue;
     width: 95%;
     margin: auto;
   }
@@ -778,8 +777,8 @@ button {
 /* MENU PAGE - MENU Section -> DISH CARDS  == any device  ===== */
 .dish-card {
   height: 70px;
-  background-color: grey;
-  /* border-radius: 25px; */
+  background-color: #fff;
+  border-radius: 15px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -806,14 +805,12 @@ button {
 }
 
 .dish-card-txt h3 {
-  background-color: violet;
   padding-bottom: 7px;
 }
 
 /* dish name */
 .dish-card-txt-details h4:nth-child(2) {
   /* dish price */
-  background-color: lightblue;
   min-width: 50px;
 }
 
@@ -823,6 +820,8 @@ button {
   color: #fff;
   background-color: #99E2D0;
   text-align: center;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .fas.fa-check-circle {
@@ -831,10 +830,7 @@ button {
 }
 
 /* tests */
-.dish-card-txt-details h4 {
-  background-color: yellow;
-}
-
+/* .dish-card-txt-details h4{ background-color: yellow;} */
 /*  MENU PAGE - ORDER Section */
 .order {
   width: 90%;

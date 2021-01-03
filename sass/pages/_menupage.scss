@@ -87,8 +87,8 @@
 /* MENU PAGE - MENU Section -> DISH CARDS  == any device  ===== */
 .dish-card {
     height:70px;
-    background-color: grey;
-    /* border-radius: 25px; */
+    background-color: $white;
+    border-radius: 15px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -103,26 +103,26 @@
 }
 .dish-card-txt h3,
 .dish-card-txt h4 { margin: 0; max-height: 1.5em; overflow: hidden; } 
-.dish-card-txt h3 { background-color: violet; padding-bottom: 7px;}  /* dish name */
+.dish-card-txt h3 { padding-bottom: 7px;}  /* dish name */
 
 .dish-card-txt-details h4:nth-child(2){ /* dish price */
-    background-color: lightblue;
     min-width:50px;
 }
-
 
 .dish-card-icon {
     width: 60px;
     height: 100%;
     color: #fff; 
-    background-color:#99E2D0;
+    background-color: $tertiary;
     text-align: center;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 .fas.fa-check-circle { font-size: 20px !important; line-height: 3.5;}
 
 
 /* tests */
-.dish-card-txt-details h4{ background-color: yellow;}
+/* .dish-card-txt-details h4{ background-color: yellow;} */
 
 
 

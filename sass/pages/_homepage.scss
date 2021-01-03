@@ -210,8 +210,6 @@
         @include max-600px { margin-bottom: 15px; }
         @include min600px-max1200px { margin-bottom: 20px; }
 
-        
-
         a { display: block; @include h100w100; }
 
         .new-tag,.heart-icon {
@@ -266,9 +264,6 @@
 }
 
 
-
-
-
 /* RESULTS SECTION == from 600 and up : results on rows ---  */
 @media only screen and (min-width: 600px) { 
     .results-section__cards-wrapper { 
@@ -284,7 +279,6 @@
 /* RESULTS SECTION == 1200 and up : results on rows of 4 ---  */
 @media only screen and (min-width: 1200px) {
     .results-section__cards-wrapper { 
-        background-color: lightblue;
         width:95%; margin:auto;
     }
     .results-section__card { flex-basis: 24%; }
