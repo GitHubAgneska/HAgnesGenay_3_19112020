@@ -94,8 +94,6 @@ html {
 
 body {
   margin: auto;
-  background-color: #eaeaea;
-  /* search-bar default color with shadow of header */
 }
 
 a {
@@ -139,6 +137,8 @@ button {
 
 .header {
   position: relative;
+  z-index: 2;
+  /* to make box-shadow visible  */
   height: 60px;
   margin-top: 0;
   background-color: #fff;
@@ -286,6 +286,11 @@ button {
 /* =============================================== */
 /* ===  HOMEPAGE -  MAIN SECTIONS === */
 /* =============================================== */
+/* search-bar default color with shadow of header */
+#homepage-header, .homepage {
+  background-color: #eaeaea;
+}
+
 /* ===  HOMEPAGE -  MAIN SECTIONS COMMON RULES === */
 /* HOMEPAGE - MAIN SECTIONS == any device  ===== */
 /* all sections content */
@@ -375,7 +380,7 @@ button {
   flex-flow: row nowrap;
   /* =====>>>>>>  */
   justify-content: center;
-  margin: 15px 0px 15px 50px;
+  padding: 15px 0px 15px 50px;
 }
 .search-bar__elements-container .icon, .search-bar__elements-container .input-container {
   height: 20px;
@@ -411,8 +416,9 @@ button {
 /* EXPLORE search-bar  == 1200 and up --- */
 @media only screen and (min-width: 1200px) {
   .search-bar {
-    width: 60%;
+    width: 95%;
     margin: 35px auto;
+    background-color: #eaeaea;
   }
 }
 /* EXPLORE TEXT === up to 600  ----  */
@@ -727,6 +733,10 @@ button {
 /* ======================================== */
 /* MENU PAGES -  MAIN SECTIONS === */
 /* ======================================== */
+body .menupage {
+  background-color: #f6f6f6;
+}
+
 /* MENU PAGE - TOP IMAGE == any device  =====*/
 .main-content-wrapper {
   position: relative;
@@ -746,27 +756,29 @@ button {
   object-fit: cover;
 }
 
+.menu, .order {
+  background-color: #f6f6f6;
+}
+
 /* MENU PAGE - MENU Section == any device  ===== */
 .menu {
-  background-color: #f6f6f6;
   position: relative;
   top: -60px;
   padding-top: 20px;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
 }
-
-.menu-elements-wrapper {
+.menu__elements-wrapper {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
-.menu-elements-wrapper .menu-name-wrapper {
+.menu__name-wrapper {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-.menu-elements-wrapper .menu-name-wrapper .heart-icon {
+.menu__name-wrapper .heart-icon {
   font-size: 2rem;
   display: flex;
   flex-flow: column nowrap;
@@ -845,8 +857,7 @@ button {
 }
 
 /*  MENU PAGE - ORDER Section */
-.order {
-  width: 90%;
+.order * {
   margin-left: auto;
   margin-right: auto;
 }

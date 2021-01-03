@@ -21,6 +21,9 @@
 /* ===  HOMEPAGE -  MAIN SECTIONS === */
 /* =============================================== */
 
+/* search-bar default color with shadow of header */
+#homepage-header, .homepage { background-color: $lightgrey2; }
+
 /* ===  HOMEPAGE -  MAIN SECTIONS COMMON RULES === */
 /* HOMEPAGE - MAIN SECTIONS == any device  ===== */
 /* all sections content */
@@ -88,7 +91,7 @@
     &__elements-container { 
         display:flex; flex-flow: row nowrap;  /* =====>>>>>>  */
         justify-content: center;
-        margin: 15px 0px 15px 50px; 
+        padding: 15px 0px 15px 50px; 
         .icon, .input-container { height: 20px; }
         .icon { 
             width: 20px;
@@ -115,7 +118,7 @@
 }
 /* EXPLORE search-bar  == 1200 and up --- */
 @media only screen and (min-width: 1200px) { 
-    .search-bar { width:60%; margin:35px auto; } 
+    .search-bar { width:95%; margin:35px auto; background-color: $lightgrey2;} 
 }
 
 /* EXPLORE TEXT === up to 600  ----  */

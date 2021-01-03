@@ -41,6 +41,7 @@
 /* MENU PAGES -  MAIN SECTIONS === */
 /* ======================================== */
 
+body .menupage { background-color: $lightgrey; }
 
 /* MENU PAGE - TOP IMAGE == any device  =====*/
 .main-content-wrapper { position: relative; }
@@ -57,30 +58,28 @@
     display: block;
     object-fit: cover;
 }
+.menu, .order { background-color: $lightgrey;}
 
 /* MENU PAGE - MENU Section == any device  ===== */
-.menu {  
-        background-color: #f6f6f6; 
+.menu {
         position: relative;
         top: -60px;
         padding-top: 20px;
         border-top-right-radius: 50px;
         border-top-left-radius: 50px;
+        &__elements-wrapper{
+            width: 90%;
+            margin-left: auto; margin-right: auto;
+        }
+        &__name-wrapper {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            .heart-icon {
+                @include icon-size(2rem);
+                @include icon-base; }
+        }
 }
-.menu-elements-wrapper{
-    width: 90%;
-    margin-left: auto; margin-right: auto;
-    .menu-name-wrapper {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        .heart-icon {
-            @include icon-size(2rem);
-            @include icon-base; }
-    }
-}
-
-
 
 
 
@@ -129,6 +128,7 @@
 
 
 /*  MENU PAGE - ORDER Section */
-.order {     
-    width: 90%;
-    margin-left: auto; margin-right: auto;}
+
+.order * { 
+    @include mlmr-auto;
+}
