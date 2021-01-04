@@ -8,5 +8,6 @@
         background: $btn-gradient ;
         color: $white;
         font-size:1rem;
+        @include box-shadow-base;
     }
 }

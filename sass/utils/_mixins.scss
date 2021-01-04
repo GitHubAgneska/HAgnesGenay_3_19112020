@@ -126,6 +126,14 @@ $wrap: ( wrap:wrap, nwrap:nowrap );
     font-size: $size;
 }
 
+/* ======================================== */
+/* EFFECTS */
+/* ======================================== */
+
+@mixin box-shadow-base { 
+    box-shadow: 0px 7px 10px #cacaca;
+}
+
 
 
 

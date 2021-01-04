@@ -24,7 +24,6 @@
 /* search-bar default color with shadow of header */
 #homepage-header, .homepage { background-color: $lightgrey2; }
 
-/* ===  HOMEPAGE -  MAIN SECTIONS COMMON RULES === */
 /* HOMEPAGE - MAIN SECTIONS == any device  ===== */
 /* all sections content */
 .explore-elements-wrapper,
@@ -133,7 +132,7 @@
         height: 75px;
         background-color: $lightgrey;
         margin-bottom: 20px;            /* =====>>>>>>  */
-        
+        @include box-shadow-base;
         .card-elements { 
             margin: 25px auto;   /* =====>>>>>>  */
             height:25px;
@@ -166,9 +165,6 @@
 }
 
 
-
-
-
 /* RESULTS SECTION */
 /* ===================== */
 
@@ -187,6 +183,7 @@
         @include max-600px { margin-bottom: 15px; }
         @include min600px-max1200px { margin-bottom: 20px; flex-basis: 48%; }
         @include min-1200px { flex-basis: 24%; }
+        @include box-shadow-base;
         a { display: block; @include h100w100; }
 
         .new-tag,.heart-icon {
@@ -235,7 +232,7 @@
                     h3 { margin-left: 15px;
                         line-height: 1.8rem; }
                 }
-        }
+            }
 
     }
 }

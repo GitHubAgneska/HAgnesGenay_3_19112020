@@ -39,6 +39,9 @@
 /* ======================================== */
 /* ICONS */
 /* ======================================== */
+/* ======================================== */
+/* EFFECTS */
+/* ======================================== */
 /* ================================== */
 /* Fonts */
 /* ================================== */
@@ -133,6 +136,7 @@ button {
   background: linear-gradient(170deg, #ff79da 0%, #9356dc 80%);
   color: #fff;
   font-size: 1rem;
+  box-shadow: 0px 7px 10px #cacaca;
 }
 
 .header {
@@ -291,7 +295,6 @@ button {
   background-color: #eaeaea;
 }
 
-/* ===  HOMEPAGE -  MAIN SECTIONS COMMON RULES === */
 /* HOMEPAGE - MAIN SECTIONS == any device  ===== */
 /* all sections content */
 .explore-elements-wrapper,
@@ -496,6 +499,7 @@ button {
   background-color: #f6f6f6;
   margin-bottom: 20px;
   /* =====>>>>>>  */
+  box-shadow: 0px 7px 10px #cacaca;
 }
 .how-section__card .card-elements {
   margin: 25px auto;
@@ -554,7 +558,7 @@ button {
 /* ===================== */
 @media screen and (min-width: 599px) {
   .results-section__cards-wrapper {
-    /* from 600 and up : results on rows */
+    /* results => rows */
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -570,6 +574,7 @@ button {
   height: 250px;
   position: relative;
   /* border: 2px solid violet; */
+  box-shadow: 0px 7px 10px #cacaca;
 }
 @media screen and (max-width: 599px) {
   .results-section__card {
@@ -657,24 +662,6 @@ button {
   line-height: 1.8rem;
 }
 
-/* RESULTS SECTION == from 600 and up : results on rows ---  */
-/* @media only screen and (min-width: 600px) { 
-    .results-section__cards-wrapper { 
-        display: flex; flex-flow: row wrap; 
-        justify-content: space-between;
-    }
-} */
-/* RESULTS SECTION == from 600 to 1200 : results on rows of 2 ---  */
-@media only screen and (min-width: 601px) and (max-width: 1199px) {
-  /*  .results-section__card { flex-basis: 48%; } */
-}
-/* RESULTS SECTION == 1200 and up : results on rows of 4 ---  */
-@media only screen and (min-width: 1200px) {
-  /*  .results-section__cards-wrapper { 
-       width:95%; margin:auto;
-   } */
-  /*  .results-section__card { flex-basis: 24%; } */
-}
 /* =============================================== */
 /* MENUPAGE - FONTS RULES  */
 /* =============================================== */
@@ -788,6 +775,7 @@ body .menupage {
   flex-flow: row nowrap;
   justify-content: space-between;
   margin: 2% auto;
+  box-shadow: 0px 7px 10px #cacaca;
 }
 .dish-card__txt {
   padding: 14px 0 14px 10px;
