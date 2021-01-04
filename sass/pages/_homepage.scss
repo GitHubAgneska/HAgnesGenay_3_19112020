@@ -204,7 +204,19 @@
             bottom:25px;
             right:20px; 
             width:30px; height:30px;
-            /* background-color: yellow; */
+
+            /*  icon effect  */ 
+            .fas, .far { position:absolute; @include transition-5;}
+            /* .far = outline */
+            .far { &:hover { opacity: 0; } }
+            /* .fas = solid */
+            .fas {
+                opacity: 0;
+                &:hover {
+                    opacity: 1;
+                    @include heart-active;
+                }
+            }
         }
         figure {
             @include h100w100;

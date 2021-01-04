@@ -631,7 +631,28 @@ button {
   right: 20px;
   width: 30px;
   height: 30px;
-  /* background-color: yellow; */
+  /*  icon effect  */
+  /* .far = outline */
+  /* .fas = solid */
+}
+.results-section__card .heart-icon .fas, .results-section__card .heart-icon .far {
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+.results-section__card .heart-icon .far:hover {
+  opacity: 0;
+}
+.results-section__card .heart-icon .fas {
+  opacity: 0;
+}
+.results-section__card .heart-icon .fas:hover {
+  opacity: 1;
+  color: #FF79DA;
+  /*  text-shadow: 1px 1px white, -5px -5px $primary; (interesting) */
 }
 .results-section__card figure {
   height: 100%;
