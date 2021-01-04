@@ -92,7 +92,7 @@ body .menupage { background-color: $lightgrey; }
     flex-flow: row nowrap;
     justify-content: space-between;
     margin: 2% auto;
-    @include box-shadow-base;
+    @include box-shadow;
     &__txt { 
         padding: 14px 0 14px 10px;
         flex-basis: 90%;

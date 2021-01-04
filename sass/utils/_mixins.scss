@@ -130,8 +130,8 @@ $wrap: ( wrap:wrap, nwrap:nowrap );
 /* EFFECTS */
 /* ======================================== */
 
-@mixin box-shadow-base { 
-    box-shadow: 0px 7px 10px #cacaca;
+@mixin box-shadow($color: $mediumgrey) { 
+    box-shadow: 0px 7px 10px $color;
 }
 
 

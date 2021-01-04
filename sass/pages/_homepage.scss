@@ -132,7 +132,7 @@
         height: 75px;
         background-color: $lightgrey;
         margin-bottom: 20px;            /* =====>>>>>>  */
-        @include box-shadow-base;
+        @include box-shadow;
         .card-elements { 
             margin: 25px auto;   /* =====>>>>>>  */
             height:25px;
@@ -183,7 +183,7 @@
         @include max-600px { margin-bottom: 15px; }
         @include min600px-max1200px { margin-bottom: 20px; flex-basis: 48%; }
         @include min-1200px { flex-basis: 24%; }
-        @include box-shadow-base;
+        @include box-shadow;
         a { display: block; @include h100w100; }
 
         .new-tag,.heart-icon {

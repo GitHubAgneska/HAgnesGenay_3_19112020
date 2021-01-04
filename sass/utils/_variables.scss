@@ -30,5 +30,6 @@ $greySpecific: #353535;
 
 
 /* BTN gradient */
-$btn-gradient: linear-gradient(170deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 80%); 
+$btn-gradient: linear-gradient(170deg, $secondary 0%, $primary 80%); 
+$btn-gradient-hover: linear-gradient(170deg, lighten($secondary, 10%) 0%, lighten($primary, 10%) 80%); 
 

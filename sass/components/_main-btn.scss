@@ -5,9 +5,14 @@
         height:50px; 
         padding: 0% 12%;
         border-radius: 50px;
-        background: $btn-gradient ;
+        background: $btn-gradient;
         color: $white;
         font-size:1rem;
-        @include box-shadow-base;
+        @include box-shadow;
+        &:hover {
+            background: $btn-gradient-hover;
+            @include box-shadow(lighten($darkgrey, 30%));
+            text-shadow: 0px 2px 15px $darkgrey;
+        }
     }
 }
