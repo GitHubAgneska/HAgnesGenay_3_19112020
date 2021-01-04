@@ -77,7 +77,20 @@ body .menupage { background-color: $lightgrey; }
             justify-content: space-between;
             .heart-icon {
                 @include icon-size(2rem);
-                @include icon-base; }
+                @include icon-base; 
+                /*  icon effect  */ 
+                .fas, .far { position:absolute; @include transition-5;}
+                /* .far = outline */
+                .far { &:hover { opacity: 0; } }
+                /* .fas = solid */
+                .fas {
+                    opacity: 0;
+                    &:hover {
+                        opacity: 1;
+                        @include heart-active;
+                    }
+                }
+            }
         }
 }
 
