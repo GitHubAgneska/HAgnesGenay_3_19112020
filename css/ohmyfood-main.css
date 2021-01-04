@@ -12,6 +12,10 @@
 /* lightgrey2 => MOBILE => search bar */
 /* grey search icon + placeholder */
 /* BTN gradient */
+/* 
+@function anim-delay($delay) {
+
+} */
 /* ======================================== */
 /* BREAKPOINTS*/
 /* ======================================== */
@@ -816,6 +820,12 @@ body .menupage {
 
 /* MENU PAGE - MENU Section -> DISH CARDS  == any device  ===== */
 .dish-card {
+  position: relative;
+  /* for anim purpose */
+  animation-name: dish-anim;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
   height: 70px;
   background-color: #fff;
   border-radius: 15px;
@@ -824,6 +834,33 @@ body .menupage {
   justify-content: space-between;
   margin: 2% auto;
   box-shadow: 0px 7px 10px #cbcbcb;
+}
+.dish-card .dish-card {
+  animation-delay: 0.5s;
+}
+.dish-card .dish-card {
+  animation-delay: 1s;
+}
+.dish-card .dish-card {
+  animation-delay: 1.5s;
+}
+.dish-card .dish-card {
+  animation-delay: 2s;
+}
+.dish-card .dish-card {
+  animation-delay: 2.5s;
+}
+.dish-card .dish-card {
+  animation-delay: 3s;
+}
+.dish-card .dish-card {
+  animation-delay: 3.5s;
+}
+.dish-card .dish-card {
+  animation-delay: 4s;
+}
+.dish-card .dish-card {
+  animation-delay: 4.5s;
 }
 .dish-card__txt {
   padding: 14px 0 14px 10px;
@@ -885,6 +922,17 @@ body .menupage {
   line-height: 3.5;
 }
 
+/* Dish cards animation  */
+@keyframes dish-anim {
+  from {
+    top: 20px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
 /*  MENU PAGE - ORDER Section */
 .order * {
   margin-left: auto;

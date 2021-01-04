@@ -98,6 +98,15 @@ body .menupage { background-color: $lightgrey; }
 
 /* MENU PAGE - MENU Section -> DISH CARDS  == any device  ===== */
 .dish-card {
+
+    position:relative; /* for anim purpose */
+    animation-name: dish-anim;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;  
+    animation-fill-mode: forwards;
+    @include delay-anim;
+
+
     height:70px;
     background-color: $white;
     border-radius: 15px;
@@ -138,6 +147,12 @@ body .menupage { background-color: $lightgrey; }
         border-bottom-right-radius: 15px;
     }
     .fas.fa-check-circle { font-size: 20px !important; line-height: 3.5;}
+}
+
+/* Dish cards animation  */
+@keyframes dish-anim {
+    from { top: 20px; opacity: 0; }
+    to { top: 0px; opacity: 1;}
 }
 
 
