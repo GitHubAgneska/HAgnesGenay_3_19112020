@@ -725,7 +725,7 @@ button {
 .main-content-wrapper.menupage h4 {
   font-family: "Roboto-thin";
 }
-.main-content-wrapper.menupage .dish-card-txt-details h4:nth-child(2) {
+.main-content-wrapper.menupage .dish-card__txt-details h4:nth-child(2) {
   font-family: "Roboto-medium";
 }
 .main-content-wrapper.menupage .menu-bloc {
@@ -820,10 +820,11 @@ body .menupage {
 
 /* MENU PAGE - MENU Section -> DISH CARDS  == any device  ===== */
 .dish-card {
+  /* open page - Dish cards animation  */
   position: relative;
   /* for anim purpose */
-  animation-name: dish-anim;
-  animation-duration: 3s;
+  animation-name: dish-appear;
+  animation-duration: 1s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
   height: 70px;
@@ -863,23 +864,13 @@ body .menupage {
   animation-delay: 4.5s;
 }
 .dish-card__txt {
+  border-radius: 15px;
   padding: 14px 0 14px 10px;
-  flex-basis: 90%;
+  flex-basis: 100%;
+  z-index: 2;
+  background-color: #fff;
   overflow: hidden;
-}
-.dish-card__txt h3, .dish-card__txt h4 {
-  margin: 0;
-  max-height: 1.5em;
-  overflow: hidden;
-}
-.dish-card__txt h3 {
-  padding-bottom: 7px;
-  /* dish name */
-}
-@media screen and (min-width: 599px) {
-  .dish-card__txt h3 {
-    margin-right: 20px;
-  }
+  /* anim dish select */
 }
 @media screen and (min-width: 599px) {
   .dish-card__txt {
@@ -888,24 +879,61 @@ body .menupage {
     align-items: center;
   }
 }
-.dish-card__txt-details {
+.dish-card__txt h3, .dish-card__txt h4 {
+  margin: 0;
+  max-height: 1.5em;
+  overflow: hidden;
+}
+.dish-card__txt h3 {
+  /* dish name */
+  background-color: lightblue;
+  padding-bottom: 7px;
+}
+@media screen and (min-width: 599px) {
+  .dish-card__txt h3 {
+    margin-right: 20px;
+  }
+}
+.dish-card__txt:hover {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+@media screen and (max-width: 599px) {
+  .dish-card__txt:hover {
+    flex-basis: 80%;
+  }
+}
+@media screen and (min-width: 599px) {
+  .dish-card__txt:hover {
+    flex-basis: 90%;
+  }
+}
+.dish-card__txt__details {
+  background-color: yellow;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  /* dish price */
 }
 @media screen and (min-width: 599px) {
-  .dish-card__txt-details {
+  .dish-card__txt__details {
     flex: auto;
   }
 }
-.dish-card__txt-details h4:nth-child(2) {
-  /* dish price */
+.dish-card__txt__details h4:nth-child(1) {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dish-card__txt__details h4:nth-child(2) {
+  background-color: pink;
   min-width: 50px;
 }
 @media screen and (min-width: 599px) {
-  .dish-card__txt-details h4:nth-child(2) {
+  .dish-card__txt__details h4:nth-child(2) {
     text-align: right;
-    margin-right: 10px;
+    margin-right: 5px;
   }
 }
 .dish-card__icon {
@@ -916,14 +944,19 @@ body .menupage {
   text-align: center;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  /*         animation-name: dish-select;
+          animation-duration: 0.5s;
+          animation-timing-function: ease-in; */
+  position: absolute;
+  right: 0;
 }
 .dish-card .fas.fa-check-circle {
   font-size: 20px !important;
   line-height: 3.5;
 }
 
-/* Dish cards animation  */
-@keyframes dish-anim {
+/* open page - Dish cards animation  */
+@keyframes dish-appear {
   from {
     top: 20px;
     opacity: 0;
@@ -931,6 +964,16 @@ body .menupage {
   to {
     top: 0px;
     opacity: 1;
+  }
+}
+/* select (hover) dish - animation */
+@keyframes dish-select {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 60px;
+    color: red;
   }
 }
 /*  MENU PAGE - ORDER Section */

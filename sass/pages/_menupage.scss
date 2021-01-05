@@ -22,7 +22,7 @@
     h4 { font-family: map-get($font-families, rob-thin); }
 
     /* dish price */
-    .dish-card-txt-details h4:nth-child(2) {font-family: map-get($font-families, rob-medium); }
+    .dish-card__txt-details h4:nth-child(2) {font-family: map-get($font-families, rob-medium); }
 
     /* -- exceptions / specials --- */
     /* dish types underlining  */
@@ -98,14 +98,13 @@ body .menupage { background-color: $lightgrey; }
 
 /* MENU PAGE - MENU Section -> DISH CARDS  == any device  ===== */
 .dish-card {
-
+    /* open page - Dish cards animation  */
     position:relative; /* for anim purpose */
-    animation-name: dish-anim;
-    animation-duration: 3s;
+    animation-name: dish-appear;
+    animation-duration: 1s;
     animation-timing-function: ease-in;  
     animation-fill-mode: forwards;
     @include delay-anim;
-
 
     height:70px;
     background-color: $white;
@@ -115,29 +114,51 @@ body .menupage { background-color: $lightgrey; }
     justify-content: space-between;
     margin: 2% auto;
     @include box-shadow;
+
     &__txt { 
+        border-radius: 15px;
         padding: 14px 0 14px 10px;
-        flex-basis: 90%;
+        flex-basis: 100%;
+        z-index: 2;
+
+        background-color: $white;
         overflow: hidden;
+        @include min-600px { display: flex; flex-flow: row nowrap; align-items: center; }
         h3, h4 { margin: 0; max-height: 1.5em; overflow: hidden; } 
-        h3 { 
-            padding-bottom: 7px;/* dish name */
-            @include min-600px { margin-right: 20px; }
-        }  
-        @include min-600px { 
-            display: flex; flex-flow: row nowrap; align-items: center; }
-    }
-    &__txt-details { 
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        @include min-600px { flex: auto;}
-        h4:nth-child(2){ /* dish price */
-            min-width:50px;
-            @include min-600px { text-align: right; margin-right: 10px; }
+        h3 { /* dish name */
+            background-color: lightblue;
+            padding-bottom: 7px;
+            @include min-600px { margin-right: 20px; } 
+        }
+        /* anim dish select */
+        &:hover { 
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            @include max-600px { flex-basis: 80%; }
+            @include min-600px { flex-basis: 90%; }
+            }
+        
+        &__details { 
+            background-color: yellow;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            @include min-600px { flex: auto;}
+            h4:nth-child(1){ 
+                min-width: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;}
+            /* dish price */
+            h4:nth-child(2){
+                background-color: pink;
+                min-width:50px;
+                @include min-600px { text-align: right; margin-right: 5px; }
+            }
         }
     }
     &__icon {
+        
         width: 60px;
         height: 100%;
         color: $white; 
@@ -145,14 +166,27 @@ body .menupage { background-color: $lightgrey; }
         text-align: center;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
+
+/*         animation-name: dish-select;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in; */
+        position: absolute;
+        right:0;
     }
     .fas.fa-check-circle { font-size: 20px !important; line-height: 3.5;}
 }
 
-/* Dish cards animation  */
-@keyframes dish-anim {
+/* open page - Dish cards animation  */
+@keyframes dish-appear {
     from { top: 20px; opacity: 0; }
     to { top: 0px; opacity: 1;}
+}
+
+
+/* select (hover) dish - animation */
+@keyframes dish-select {
+    from { width:0px; }
+    to { width:60px; color: red; }
 }
 
 
