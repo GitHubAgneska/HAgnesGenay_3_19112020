@@ -65,24 +65,22 @@ body .menupage { background-color: $lightgrey; }
         position: relative;
         top: -60px;
         padding-top: 20px;
-        border-top-right-radius: 50px;
-        border-top-left-radius: 50px;
+        @include border-radius(50px 50px 0px 0px);
         &__elements-wrapper{
             width: 90%;
-            margin-left: auto; margin-right: auto;
+            @include mlmr-auto;
         }
         &__name-wrapper {
-            display: flex;
-            flex-flow: row nowrap;
+            @include flex-row-nowrap;
             justify-content: space-between;
             .heart-icon {
                 @include icon-size(2rem);
                 @include icon-base; 
                 /*  icon effect  */ 
                 .fas, .far { position:absolute; @include transition-5;}
-                /* .far = outline */
+                /* outline */
                 .far { &:hover { opacity: 0; } }
-                /* .fas = solid */
+                /* solid */
                 .fas {
                     opacity: 0;
                     &:hover {
@@ -100,30 +98,25 @@ body .menupage { background-color: $lightgrey; }
 .dish-card {
     /* open page - Dish cards animation  */
     position:relative; /* for anim purpose */
-    animation-name: dish-appear;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;  
-    animation-fill-mode: forwards;
+    animation: dish-appear 1s ease-in forwards;
     @include delay-anim;
 
     height:70px;
+    margin: 2% auto;
+    @include flex-row-nowrap;
+    justify-content: space-between;
     background-color: $white;
     border-radius: 15px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    margin: 2% auto;
     @include box-shadow;
 
     &__txt { 
-        border-radius: 15px;
         padding: 14px 0 14px 10px;
         flex-basis: 100%;
+        border-radius: 15px;
         z-index: 2;
-
-        background-color: $white;
         overflow: hidden;
-        @include min-600px { display: flex; flex-flow: row nowrap; align-items: center; }
+        background-color: $white;
+        @include min-600px { @include flex-row-nowrap; align-items: center; }
         h3, h4 { margin: 0; max-height: 1.5em; overflow: hidden; } 
         h3 { /* dish name */
             background-color: lightblue;
@@ -132,16 +125,13 @@ body .menupage { background-color: $lightgrey; }
         }
         /* anim dish select */
         &:hover { 
-            border-top-right-radius: 0px;
-            border-bottom-right-radius: 0px;
+           /*  @include border-radius(0px); */
             @include max-600px { flex-basis: 80%; }
             @include min-600px { flex-basis: 90%; }
-            }
-        
+        }
         &__details { 
             background-color: yellow;
-            display: flex;
-            flex-flow: row nowrap;
+            @include flex-row-nowrap;
             justify-content: space-between;
             @include min-600px { flex: auto;}
             h4:nth-child(1){ 
@@ -157,9 +147,9 @@ body .menupage { background-color: $lightgrey; }
             }
         }
     }
-    &__icon {
-        
-        width: 60px;
+    &__icon { 
+        width: 0px;
+        /* width: 60px; */
         height: 100%;
         color: $white; 
         background-color: $tertiary;
@@ -167,13 +157,25 @@ body .menupage { background-color: $lightgrey; }
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
 
-/*         animation-name: dish-select;
-        animation-duration: 0.5s;
-        animation-timing-function: ease-in; */
-        position: absolute;
-        right:0;
+        /* anim tests */
+        display: flex;
+        flex-basis: 0;
+        /* position: absolute;
+           right:0; */
+
+/*      animation: dish-select 0.5s ease-in; */
+    .fas.fa-check-circle { 
+        font-size: 20px !important;
+        line-height: 3.5;
+        visibility: hidden;
+        }
     }
-    .fas.fa-check-circle { font-size: 20px !important; line-height: 3.5;}
+    &:hover .dish-card__icon { 
+        flex-basis: 20%; 
+    }
+    &:hover .dish-card__icon .fas.fa-check-circle{ 
+        visibility: visible;
+    }
 }
 
 /* open page - Dish cards animation  */

@@ -44,6 +44,9 @@
 /* ICONS */
 /* ======================================== */
 /* ======================================== */
+/* BORDER-RADIUS */
+/* ======================================== */
+/* ======================================== */
 /* EFFECTS */
 /* ======================================== */
 /* ================================== */
@@ -775,8 +778,7 @@ body .menupage {
   position: relative;
   top: -60px;
   padding-top: 20px;
-  border-top-right-radius: 50px;
-  border-top-left-radius: 50px;
+  border-radius: 50px 50px 0px 0px;
 }
 .menu__elements-wrapper {
   width: 90%;
@@ -795,8 +797,8 @@ body .menupage {
   justify-content: center;
   align-items: center;
   /*  icon effect  */
-  /* .far = outline */
-  /* .fas = solid */
+  /* outline */
+  /* solid */
 }
 .menu__name-wrapper .heart-icon .fas, .menu__name-wrapper .heart-icon .far {
   position: absolute;
@@ -823,17 +825,14 @@ body .menupage {
   /* open page - Dish cards animation  */
   position: relative;
   /* for anim purpose */
-  animation-name: dish-appear;
-  animation-duration: 1s;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards;
+  animation: dish-appear 1s ease-in forwards;
   height: 70px;
-  background-color: #fff;
-  border-radius: 15px;
+  margin: 2% auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  margin: 2% auto;
+  background-color: #fff;
+  border-radius: 15px;
   box-shadow: 0px 7px 10px #cbcbcb;
 }
 .dish-card .dish-card {
@@ -864,12 +863,12 @@ body .menupage {
   animation-delay: 4.5s;
 }
 .dish-card__txt {
-  border-radius: 15px;
   padding: 14px 0 14px 10px;
   flex-basis: 100%;
+  border-radius: 15px;
   z-index: 2;
-  background-color: #fff;
   overflow: hidden;
+  background-color: #fff;
   /* anim dish select */
 }
 @media screen and (min-width: 599px) {
@@ -895,8 +894,7 @@ body .menupage {
   }
 }
 .dish-card__txt:hover {
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
+  /*  @include border-radius(0px); */
 }
 @media screen and (max-width: 599px) {
   .dish-card__txt:hover {
@@ -937,22 +935,31 @@ body .menupage {
   }
 }
 .dish-card__icon {
-  width: 60px;
+  width: 0px;
+  /* width: 60px; */
   height: 100%;
   color: #fff;
   background-color: #99E2D0;
   text-align: center;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  /*         animation-name: dish-select;
-          animation-duration: 0.5s;
-          animation-timing-function: ease-in; */
-  position: absolute;
-  right: 0;
+  /* anim tests */
+  display: flex;
+  flex-basis: 0;
+  /* position: absolute;
+     right:0; */
+  /*      animation: dish-select 0.5s ease-in; */
 }
-.dish-card .fas.fa-check-circle {
+.dish-card__icon .fas.fa-check-circle {
   font-size: 20px !important;
   line-height: 3.5;
+  visibility: hidden;
+}
+.dish-card:hover .dish-card__icon {
+  flex-basis: 20%;
+}
+.dish-card:hover .dish-card__icon .fas.fa-check-circle {
+  visibility: visible;
 }
 
 /* open page - Dish cards animation  */

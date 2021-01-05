@@ -81,6 +81,11 @@ $wrap: ( wrap:wrap, nwrap:nowrap );
     flex-flow: $dir $wrap;
 }
 
+@mixin flex-row-nowrap {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
 
 
 
@@ -125,6 +130,16 @@ $wrap: ( wrap:wrap, nwrap:nowrap );
 @mixin icon-size( $size: 1.3rem ) { 
     font-size: $size;
 }
+
+/* ======================================== */
+/* BORDER-RADIUS */
+/* ======================================== */
+
+@mixin border-radius($pixel...) {
+    border-radius: $pixel;
+}
+
+
 
 /* ======================================== */
 /* EFFECTS */
