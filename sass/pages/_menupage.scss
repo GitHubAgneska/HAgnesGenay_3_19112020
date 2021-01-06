@@ -148,33 +148,35 @@ body .menupage { background-color: $lightgrey; }
         }
     }
     &__icon { 
-        width: 0px;
-        /* width: 60px; */
         height: 100%;
         color: $white; 
         background-color: $tertiary;
         text-align: center;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
-
-        /* anim tests */
+        @include icon-base;
+        
+        /* anim check dish */
+        width: 0px;
         display: flex;
         flex-basis: 0;
-        /* position: absolute;
-           right:0; */
 
-/*      animation: dish-select 0.5s ease-in; */
-    .fas.fa-check-circle { 
-        font-size: 20px !important;
-        line-height: 3.5;
-        visibility: hidden;
+        .fas.fa-check-circle { 
+            font-size: 20px !important;
+            line-height: 3.5;
+            visibility: hidden;
         }
     }
     &:hover .dish-card__icon { 
-        flex-basis: 20%; 
+        flex-basis: 20%;
+        overflow: hidden;
     }
     &:hover .dish-card__icon .fas.fa-check-circle{ 
         visibility: visible;
+    }
+    &:hover .dish-card__icon i.fas.fa-check-circle{ 
+        visibility: visible;
+        transform: rotate(360deg);
     }
 }
 
@@ -185,15 +187,9 @@ body .menupage { background-color: $lightgrey; }
 }
 
 
-/* select (hover) dish - animation */
-@keyframes dish-select {
-    from { width:0px; }
-    to { width:60px; color: red; }
-}
 
 
 /*  MENU PAGE - ORDER Section */
-
 .order * { 
     @include mlmr-auto;
 }

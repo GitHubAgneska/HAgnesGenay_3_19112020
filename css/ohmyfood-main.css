@@ -935,20 +935,20 @@ body .menupage {
   }
 }
 .dish-card__icon {
-  width: 0px;
-  /* width: 60px; */
   height: 100%;
   color: #fff;
   background-color: #99E2D0;
   text-align: center;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  /* anim tests */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  /* anim check dish */
+  width: 0px;
   display: flex;
   flex-basis: 0;
-  /* position: absolute;
-     right:0; */
-  /*      animation: dish-select 0.5s ease-in; */
 }
 .dish-card__icon .fas.fa-check-circle {
   font-size: 20px !important;
@@ -957,9 +957,14 @@ body .menupage {
 }
 .dish-card:hover .dish-card__icon {
   flex-basis: 20%;
+  overflow: hidden;
 }
 .dish-card:hover .dish-card__icon .fas.fa-check-circle {
   visibility: visible;
+}
+.dish-card:hover .dish-card__icon i.fas.fa-check-circle {
+  visibility: visible;
+  transform: rotate(360deg);
 }
 
 /* open page - Dish cards animation  */
@@ -971,16 +976,6 @@ body .menupage {
   to {
     top: 0px;
     opacity: 1;
-  }
-}
-/* select (hover) dish - animation */
-@keyframes dish-select {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 60px;
-    color: red;
   }
 }
 /*  MENU PAGE - ORDER Section */
