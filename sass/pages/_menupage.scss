@@ -22,7 +22,7 @@
     h4 { font-family: map-get($font-families, rob-thin); }
 
     /* dish price */
-    .dish-card__txt-details h4:nth-child(2) {font-family: map-get($font-families, rob-medium); }
+    .dish-card__txt__details h4:nth-child(2) {font-family: map-get($font-families, rob-medium); font-weight: normal;}
 
     /* -- exceptions / specials --- */
     /* dish types underlining  */
@@ -119,31 +119,28 @@ body .menupage { background-color: $lightgrey; }
         @include min-600px { @include flex-row-nowrap; align-items: center; }
         h3, h4 { margin: 0; max-height: 1.5em; overflow: hidden; } 
         h3 { /* dish name */
-            background-color: lightblue;
             padding-bottom: 7px;
             @include min-600px { margin-right: 20px; } 
         }
         /* anim dish select */
         &:hover { 
-           /*  @include border-radius(0px); */
             @include max-600px { flex-basis: 80%; }
             @include min-600px { flex-basis: 90%; }
         }
         &__details { 
-            background-color: yellow;
             @include flex-row-nowrap;
             justify-content: space-between;
             @include min-600px { flex: auto;}
-            h4:nth-child(1){ 
+
+            h4:nth-child(1){ /* dish subtitle */
                 min-width: 0;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;}
-            /* dish price */
-            h4:nth-child(2){
-                background-color: pink;
+            h4:nth-child(2){ /* dish price */
                 min-width:50px;
-                @include min-600px { text-align: right; margin-right: 5px; }
+                margin-left: 5px;
+                @include min-600px { margin-right: 5px; }
             }
         }
     }
@@ -180,7 +177,7 @@ body .menupage { background-color: $lightgrey; }
     }
 }
 
-/* open page - Dish cards animation  */
+/* open page - Dish cards appearing animation  */
 @keyframes dish-appear {
     from { top: 20px; opacity: 0; }
     to { top: 0px; opacity: 1;}

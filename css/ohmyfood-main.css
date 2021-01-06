@@ -151,6 +151,68 @@ button {
   text-shadow: 0px 2px 15px #353535;
 }
 
+.spinner-wrapper {
+  animation: loading-block 3s ease-out forwards;
+  position: absolute;
+  z-index: 5;
+  width: 100vw;
+  height: 100%;
+  background-color: #cbcbcb;
+  /* opacity: 0.8; */
+}
+.spinner-wrapper__anim-wrapper {
+  background-color: yellow;
+  width: 25%;
+  height: 60%;
+  margin: auto;
+}
+.spinner-wrapper__anim-wrapper__icons-wrapper {
+  background-color: lightblue;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  position: relative;
+  height: 100%;
+}
+.spinner-wrapper__anim-wrapper__icons-wrapper i.fas {
+  position: absolute;
+}
+.spinner-wrapper__anim-wrapper__icons-wrapper i.fas.fa-mobile-alt {
+  opacity: 0;
+  animation: spinner-icons 1s forwards;
+}
+.spinner-wrapper__anim-wrapper__icons-wrapper i.fa-store {
+  opacity: 0;
+  animation: spinner-icons 1s 1s forwards;
+}
+.spinner-wrapper__anim-wrapper__icons-wrapper i.fa-utensils {
+  opacity: 0;
+  animation: spinner-icons 1s 2s forwards;
+}
+
+/* animation loading block */
+@keyframes loading-block {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+/* animation icons */
+@keyframes spinner-icons {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .header {
   position: relative;
   z-index: 2;
@@ -728,8 +790,9 @@ button {
 .main-content-wrapper.menupage h4 {
   font-family: "Roboto-thin";
 }
-.main-content-wrapper.menupage .dish-card__txt-details h4:nth-child(2) {
+.main-content-wrapper.menupage .dish-card__txt__details h4:nth-child(2) {
   font-family: "Roboto-medium";
+  font-weight: normal;
 }
 .main-content-wrapper.menupage .menu-bloc {
   position: relative;
@@ -885,16 +948,12 @@ body .menupage {
 }
 .dish-card__txt h3 {
   /* dish name */
-  background-color: lightblue;
   padding-bottom: 7px;
 }
 @media screen and (min-width: 599px) {
   .dish-card__txt h3 {
     margin-right: 20px;
   }
-}
-.dish-card__txt:hover {
-  /*  @include border-radius(0px); */
 }
 @media screen and (max-width: 599px) {
   .dish-card__txt:hover {
@@ -907,11 +966,9 @@ body .menupage {
   }
 }
 .dish-card__txt__details {
-  background-color: yellow;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  /* dish price */
 }
 @media screen and (min-width: 599px) {
   .dish-card__txt__details {
@@ -919,18 +976,19 @@ body .menupage {
   }
 }
 .dish-card__txt__details h4:nth-child(1) {
+  /* dish subtitle */
   min-width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .dish-card__txt__details h4:nth-child(2) {
-  background-color: pink;
+  /* dish price */
   min-width: 50px;
+  margin-left: 5px;
 }
 @media screen and (min-width: 599px) {
   .dish-card__txt__details h4:nth-child(2) {
-    text-align: right;
     margin-right: 5px;
   }
 }
@@ -967,7 +1025,7 @@ body .menupage {
   transform: rotate(360deg);
 }
 
-/* open page - Dish cards animation  */
+/* open page - Dish cards appearing animation  */
 @keyframes dish-appear {
   from {
     top: 20px;
