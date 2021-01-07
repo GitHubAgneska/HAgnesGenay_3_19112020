@@ -795,6 +795,7 @@ body {
 .main-content-wrapper.menupage h2 {
   font-family: "Roboto-thin";
   font-variant: small-caps;
+  text-align: unset;
 }
 .main-content-wrapper.menupage h3 {
   font-family: "Roboto-medium";
