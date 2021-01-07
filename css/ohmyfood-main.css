@@ -747,14 +747,19 @@ body {
   overflow: hidden;
   border-radius: 15px;
 }
-.results-section__card figure img {
-  /* background-color:lavender; */
+.results-section__card figure img:not(.rotate) {
+  display: block;
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: bottom;
-  display: block;
-  overflow: hidden;
+  padding-bottom: 75px;
+  /* compensate figcap H */
+}
+.results-section__card figure img.rotate {
+  transform: rotate(90deg);
+  transform-origin: 57% 25%;
+  width: 135%;
 }
 .results-section__card figure figcaption {
   background-color: #fff;
