@@ -869,6 +869,7 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  align-items: end;
   /*  icon effect  */
   /* outline */
   /* solid */

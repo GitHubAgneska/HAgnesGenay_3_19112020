@@ -76,7 +76,8 @@
             justify-content: space-between;
             .heart-icon {
                 @include icon-size(2rem);
-                @include icon-base; 
+                @include icon-base;
+                align-items: end;
                 /*  icon effect  */ 
                 .fas, .far { position:absolute; @include transition-5;}
                 /* outline */
