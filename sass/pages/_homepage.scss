@@ -179,11 +179,13 @@ body { background-color: $lightgrey2; }
     &__card {
         height:250px;
         position: relative;
-        /* border: 2px solid violet; */
+        border-radius: 15px;
         @include max-600px { margin-bottom: 15px; }
         @include min600px-max1200px { margin-bottom: 20px; flex-basis: 48%; }
         @include min-1200px { flex-basis: 24%; }
         @include box-shadow;
+        &:hover{@include box-shadow(lighten($darkgrey, 30%));}
+
         a { display: block; @include h100w100; }
 
         .new-tag,.heart-icon {

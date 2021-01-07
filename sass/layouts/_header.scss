@@ -1,8 +1,13 @@
 
+    .menupages-header .header.menupage-header {
+            height: 60px;
+            @include min-1200px { width: 80%; @include mlmr-auto; }
+            
+    }
 
 header {
     position: relative;
-    z-index: 2; /* to make box-shadow visible  */
+    z-index: 10; /* to make box-shadow visible + higher than spinner container */
     height: 60px;
     margin-top: 0;
     background-color: $white;
@@ -19,11 +24,6 @@ header {
                 @include min-1200px { max-width: 215px; }
             }
         }
-        .menupage-header {
-                height: 60px;
-                @include min-1200px { width: 80%; @include mlmr-auto; }
-                
-            }
         &__back-arrow {
             position:absolute;
             z-index:2;
