@@ -212,7 +212,7 @@ button {
     opacity: 0;
   }
 }
-.header {
+header {
   position: relative;
   z-index: 2;
   /* to make box-shadow visible  */
@@ -222,14 +222,36 @@ button {
   box-shadow: 0px 3px 7px #979696;
   /* =====>>>>>>  */
 }
+header .header__logo-wrapper {
+  margin: auto;
+}
+header .header__logo-wrapper img {
+  margin: auto;
+  /* =====>>>>>>  */
+  padding-top: 15px;
+  display: block;
+}
+@media screen and (max-width: 1199px) {
+  header .header__logo-wrapper img {
+    max-width: 170px;
+  }
+}
 @media screen and (min-width: 1199px) {
-  .header {
+  header .header__logo-wrapper img {
+    max-width: 215px;
+  }
+}
+header .header .menupage {
+  height: 60px;
+}
+@media screen and (min-width: 1199px) {
+  header .header .menupage {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
 }
-.header__back-arrow {
+header .header__back-arrow {
   position: absolute;
   z-index: 2;
   height: 100%;
@@ -240,28 +262,9 @@ button {
   justify-content: center;
   align-items: center;
 }
-.header__back-arrow .fas.fa-arrow-left {
+header .header__back-arrow .fas.fa-arrow-left {
   font-size: 25px !important;
   color: #353535;
-}
-.header__logo-wrapper {
-  margin: auto;
-}
-.header__logo-wrapper img {
-  margin: auto;
-  /* =====>>>>>>  */
-  padding-top: 15px;
-  display: block;
-}
-@media screen and (max-width: 1199px) {
-  .header__logo-wrapper img {
-    max-width: 170px;
-  }
-}
-@media screen and (min-width: 1199px) {
-  .header__logo-wrapper img {
-    max-width: 215px;
-  }
 }
 
 .nav {
@@ -364,10 +367,7 @@ button {
 /* ===  HOMEPAGE -  MAIN SECTIONS === */
 /* =============================================== */
 /* search-bar default color with shadow of header */
-#homepage-header, .homepage {
-  background-color: #eaeaea;
-}
-
+/* #homepage-header, .homepage { background-color: $lightgrey2; } */
 /* HOMEPAGE - MAIN SECTIONS == any device  ===== */
 /* all sections content */
 .explore-elements-wrapper,
@@ -808,10 +808,7 @@ button {
 /* ======================================== */
 /* MENU PAGES -  MAIN SECTIONS === */
 /* ======================================== */
-body .menupage {
-  background-color: #f6f6f6;
-}
-
+/* body .menupage { background-color: $lightgrey; } */
 /* MENU PAGE - TOP IMAGE == any device  =====*/
 .main-content-wrapper {
   position: relative;

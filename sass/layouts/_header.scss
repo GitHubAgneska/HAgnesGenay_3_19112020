@@ -1,24 +1,15 @@
 
 
-.header {
+header {
     position: relative;
     z-index: 2; /* to make box-shadow visible  */
     height: 60px;
     margin-top: 0;
     background-color: $white;
     box-shadow: 0px 3px 7px #979696;       /* =====>>>>>>  */
-    @include min-1200px { width: 80%; @include mlmr-auto; }
-    &__back-arrow {
-        position:absolute;
-        z-index:2;
-        height:100%; width:50px;
-        display: flex;                      /* =====>>>>>>  */
-        flex-flow: column nowrap;        
-        justify-content: center;
-        align-items: center;
-        .fas.fa-arrow-left { font-size: 25px !important; color:$darkgrey; }
-    }
-    &__logo-wrapper {
+    
+    .header {
+        &__logo-wrapper {
         margin: auto;
         img {
                 margin: auto;              /* =====>>>>>>  */
@@ -27,5 +18,22 @@
                 @include max-1200px { max-width: 170px; }
                 @include min-1200px { max-width: 215px; }
             }
+        }
+        .menupage {
+                height: 60px;
+                @include min-1200px { width: 80%; @include mlmr-auto; }
+                
+            }
+        &__back-arrow {
+            position:absolute;
+            z-index:2;
+            height:100%; width:50px;
+            display: flex;                      /* =====>>>>>>  */
+            flex-flow: column nowrap;        
+            justify-content: center;
+            align-items: center;
+            .fas.fa-arrow-left { font-size: 25px !important; color:$darkgrey; }
+        }
     }
+    
 }
