@@ -132,10 +132,11 @@ button {
   cursor: pointer;
 }
 
-/* EXPLORE btn == any device  ===== */
-.main-btn-wrapper {
+/* MAIN btn == any device  ===== */
+.main-btn-wrapper.home {
   margin: 20px auto;
 }
+
 .main-btn-wrapper .main-btn {
   height: 50px;
   padding: 0% 12%;
@@ -251,11 +252,11 @@ header .header__logo-wrapper img {
     max-width: 215px;
   }
 }
-header .header .menupage {
+header .header .menupage-header {
   height: 60px;
 }
 @media screen and (min-width: 1199px) {
-  header .header .menupage {
+  header .header .menupage-header {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -821,7 +822,10 @@ body {
 /* ======================================== */
 /* MENU PAGES -  MAIN SECTIONS === */
 /* ======================================== */
-/* body .menupage { background-color: $lightgrey; } */
+.main-content-wrapper.menupage, .menu {
+  background-color: #f6f6f6;
+}
+
 /* MENU PAGE - TOP IMAGE == any device  =====*/
 .main-content-wrapper {
   position: relative;
@@ -841,12 +845,9 @@ body {
   object-fit: cover;
 }
 
-.menu, .order {
-  background-color: #f6f6f6;
-}
-
 /* MENU PAGE - MENU Section == any device  ===== */
 .menu {
+  background-color: #f6f6f6;
   position: relative;
   top: -60px;
   padding-top: 20px;
@@ -1046,6 +1047,10 @@ body {
   }
 }
 /*  MENU PAGE - ORDER Section */
+section.order {
+  height: 110px;
+}
+
 .order * {
   margin-left: auto;
   margin-right: auto;

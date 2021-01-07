@@ -41,7 +41,7 @@
 /* MENU PAGES -  MAIN SECTIONS === */
 /* ======================================== */
 
-/* body .menupage { background-color: $lightgrey; } */
+.main-content-wrapper.menupage, .menu  { background-color: $lightgrey; }
 
 /* MENU PAGE - TOP IMAGE == any device  =====*/
 .main-content-wrapper { position: relative; }
@@ -58,10 +58,11 @@
     display: block;
     object-fit: cover;
 }
-.menu, .order { background-color: $lightgrey;}
+
 
 /* MENU PAGE - MENU Section == any device  ===== */
 .menu {
+        background-color: $lightgrey;
         position: relative;
         top: -60px;
         padding-top: 20px;
@@ -184,9 +185,8 @@
 }
 
 
-
-
 /*  MENU PAGE - ORDER Section */
+section.order { height: 110px;}
 .order * { 
     @include mlmr-auto;
 }

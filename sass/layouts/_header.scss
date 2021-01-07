@@ -19,7 +19,7 @@ header {
                 @include min-1200px { max-width: 215px; }
             }
         }
-        .menupage {
+        .menupage-header {
                 height: 60px;
                 @include min-1200px { width: 80%; @include mlmr-auto; }
                 
