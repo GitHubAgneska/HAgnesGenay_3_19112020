@@ -4,7 +4,8 @@
     "scss": "^0.2.4"
   },
   "scripts": {
-    "scss": "sass --watch scss:css"
-  }
-  
+    "scss": "sass --watch scss:css",
+    "prefix": "postcss ./css/ohmyfood-main.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "browserslist": "last 4 versions"
 }
