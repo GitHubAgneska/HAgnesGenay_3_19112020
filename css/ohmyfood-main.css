@@ -155,10 +155,10 @@ button {
   animation: loading-block 3s forwards;
   position: absolute;
   z-index: 5;
-  width: 100vw;
+  width: 100%;
   height: 100%;
-  background-color: #eaeaea;
-  /* opacity: 0.8; */
+  margin-top: 15px;
+  background-color: #fff;
 }
 .spinner-wrapper__anim-wrapper {
   width: 30%;
@@ -167,13 +167,23 @@ button {
 }
 .spinner-wrapper__anim-wrapper__icons-wrapper {
   /* border: 5px solid lightblue; */
+  color: #9356DC;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
   position: relative;
   height: 30%;
+}
+@media screen and (max-width: 599px) {
+  .spinner-wrapper__anim-wrapper__icons-wrapper {
+    font-size: 60px;
+  }
+}
+@media screen and (min-width: 599px) {
+  .spinner-wrapper__anim-wrapper__icons-wrapper {
+    font-size: 70px;
+  }
 }
 .spinner-wrapper__anim-wrapper__icons-wrapper i.fas {
   position: absolute;
@@ -367,7 +377,10 @@ header .header__back-arrow .fas.fa-arrow-left {
 /* ===  HOMEPAGE -  MAIN SECTIONS === */
 /* =============================================== */
 /* search-bar default color with shadow of header */
-/* #homepage-header, .homepage { background-color: $lightgrey2; } */
+body {
+  background-color: #eaeaea;
+}
+
 /* HOMEPAGE - MAIN SECTIONS == any device  ===== */
 /* all sections content */
 .explore-elements-wrapper,
