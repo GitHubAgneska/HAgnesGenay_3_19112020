@@ -101,11 +101,10 @@
 
 /* MENU PAGE - MENU Section -> DISH CARDS  == any device  ===== */
 .dish-card {
-    /* open page - Dish cards animation  */
+    /* open page - Dish cards appearing animation  */
     position:relative; /* for anim purpose */
-    animation: dish-appear 1s ease-in forwards;
-    @include delay-anim();
-
+    /* @include delay-anim(); */
+    
     height:70px;
     @include max-600px { margin: 5% auto; }
     @include min-600px { margin: 2% auto; }
@@ -114,7 +113,15 @@
     background-color: $white;
     border-radius: 15px;
     @include box-shadow;
+    
+    opacity: 0;
+    animation: dish-appear 1s ease-in-out forwards;
 
+    @for $i from 1 through 9 {
+        &:nth-child(#{$i}){ 
+            @debug( #{nth-child(#{$i})});
+            animation-delay: 0.2s * $i}
+    }  
     &__txt { 
         padding: 14px 0 14px 10px;
         flex-basis: 100%;
@@ -189,7 +196,6 @@
     from { top: 20px; opacity: 0; }
     to { top: 0px; opacity: 1;}
 }
-
 
 /*  MENU PAGE - ORDER Section */
 section.order { height: 110px;}

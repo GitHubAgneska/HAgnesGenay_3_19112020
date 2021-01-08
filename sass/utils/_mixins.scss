@@ -159,7 +159,7 @@ $wrap: ( wrap:wrap, nwrap:nowrap );
 }
 
 @mixin heart-active {
-    
+
     background: $btn-gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -192,11 +192,11 @@ $wrap: ( wrap:wrap, nwrap:nowrap );
 }
 
 
-@mixin delay-anim($selectors...){
+/* @mixin delay-anim($selectors...){
     @for $i from 1 through length($selectors) {
             .dish-card {animation-delay: 0.5s * $i}; 
     }  
-}
+} */
 
 
 
