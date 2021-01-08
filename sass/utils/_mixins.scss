@@ -4,18 +4,20 @@
 /* ======================================== */
 /* BREAKPOINTS*/
 /* ======================================== */
-$breakpoints: (mobile: 599px, tablet: 767px, laptop: 991px, desktop: 1199px );
+$breakpoints: (mobile: 600px, tablet: 768px, laptop: 992px, desktop: 1200px );
 
 /* == up to 600  */
 @mixin max-600px {
     @media screen and (max-width: map-get($breakpoints, mobile )) {
         @content;
+        @include transition-1;
     }
 }
 /* == from 600  */
 @mixin min-600px {
     @media screen and (min-width: map-get($breakpoints, mobile )) {
         @content;
+        @include transition-1;
     }
 }
 
@@ -23,6 +25,7 @@ $breakpoints: (mobile: 599px, tablet: 767px, laptop: 991px, desktop: 1199px );
 @mixin min600px-max768px {
     @media screen and (min-width: map-get($breakpoints, mobile )) and (max-width: map-get($breakpoints, tablet )){
         @content;
+        @include transition-1;
     }
 }
 
@@ -30,6 +33,7 @@ $breakpoints: (mobile: 599px, tablet: 767px, laptop: 991px, desktop: 1199px );
 @mixin min600px-max1200px {
     @media screen and (min-width: map-get($breakpoints, mobile )) and (max-width: map-get($breakpoints, desktop )){
         @content;
+        @include transition-1;
     }
 }
 
@@ -37,12 +41,14 @@ $breakpoints: (mobile: 599px, tablet: 767px, laptop: 991px, desktop: 1199px );
 @mixin max-768px {
     @media screen and (max-width: map-get($breakpoints, tablet )) {
         @content;
+        @include transition-1;
     }
 }
 /* == from 768 to  1200  */
 @mixin min768px-max1200px {
     @media screen and (min-width: map-get($breakpoints, tablet )) and (max-width: map-get($breakpoints, desktop )){
         @content;
+        @include transition-1;
     }
 }
 
@@ -50,6 +56,7 @@ $breakpoints: (mobile: 599px, tablet: 767px, laptop: 991px, desktop: 1199px );
 @mixin max-992px {
     @media screen and (max-width: map-get($breakpoints, laptop )) {
         @content;
+        @include transition-1;
     }
 }
 
@@ -57,6 +64,7 @@ $breakpoints: (mobile: 599px, tablet: 767px, laptop: 991px, desktop: 1199px );
 @mixin max-1200px {
     @media screen and (max-width: map-get($breakpoints, desktop )) {
         @content;
+        @include transition-1;
     }
 }
 
@@ -64,6 +72,7 @@ $breakpoints: (mobile: 599px, tablet: 767px, laptop: 991px, desktop: 1199px );
 @mixin min-1200px {
     @media screen and (min-width: map-get($breakpoints, desktop )) {
         @content;
+        @include transition-1;
     }
 }
 
@@ -150,7 +159,10 @@ $wrap: ( wrap:wrap, nwrap:nowrap );
 }
 
 @mixin heart-active {
-    color: $secondary;
+    
+    background: $btn-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
    /*  text-shadow: 1px 1px white, -5px -5px $primary; (interesting) */ 
 }
 
@@ -163,10 +175,25 @@ $wrap: ( wrap:wrap, nwrap:nowrap );
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
 }
+@mixin transition-1 {
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
+@mixin transition($property, $duration, $timing-function) {
+    transition: $property $duration $timing-function;
+    -webkit-transition: $property $duration $timing-function;
+    -ms-transition: $property $duration $timing-function;
+    -moz-transition: $property $duration $timing-function;
+    -o-transition: $property $duration $timing-function;
+}
 
 
-@mixin delay-anim {
-    @for $i from 1 through 9 {
+@mixin delay-anim($selectors...){
+    @for $i from 1 through length($selectors) {
             .dish-card {animation-delay: 0.5s * $i}; 
     }  
 }

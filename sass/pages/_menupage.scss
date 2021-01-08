@@ -104,7 +104,7 @@
     /* open page - Dish cards animation  */
     position:relative; /* for anim purpose */
     animation: dish-appear 1s ease-in forwards;
-    @include delay-anim;
+    @include delay-anim();
 
     height:70px;
     @include max-600px { margin: 5% auto; }
@@ -129,7 +129,7 @@
             @include min-600px { margin-right: 20px; } 
         }
         /* anim dish select */
-        &:hover { 
+        &:hover {
             @include max-600px { flex-basis: 80%; }
             @include min-600px { flex-basis: 90%; }
         }
@@ -168,14 +168,15 @@
             font-size: 20px !important;
             line-height: 3.5;
             visibility: hidden;
+            opacity:0;
         }
     }
     &:hover .dish-card__icon { 
         flex-basis: 20%;
         overflow: hidden;
     }
-    &:hover .dish-card__icon .fas.fa-check-circle{ 
-        visibility: visible;
+    &:hover .dish-card__icon .fas.fa-check-circle { 
+        visibility: visible; opacity:1;
     }
     &:hover .dish-card__icon i.fas.fa-check-circle{ 
         visibility: visible;
