@@ -96,8 +96,6 @@ $wrap: ( wrap:wrap, nwrap:nowrap );
 }
 
 
-
-
 /* ======================================== */
 /* MARGINS  */
 /* ======================================== */
@@ -116,7 +114,6 @@ $wrap: ( wrap:wrap, nwrap:nowrap );
 @mixin p-top-base {
     padding-top: 25px;
 }
-
 
 
 /* ======================================== */
@@ -149,17 +146,16 @@ $wrap: ( wrap:wrap, nwrap:nowrap );
 }
 
 
-
 /* ======================================== */
 /* EFFECTS */
 /* ======================================== */
 
 @mixin box-shadow($color: $mediumgrey) { 
-    box-shadow: 0px 7px 10px $color;
+    box-shadow: 0px 12px 10px $color;
+    @include transition-5;
 }
 
 @mixin heart-active {
-
     background: $btn-gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
