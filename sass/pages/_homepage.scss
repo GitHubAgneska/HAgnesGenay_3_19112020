@@ -85,9 +85,16 @@ body { background-color: $lightgrey2; }
 .explore-section {
     @include min-600px { display: flex; flex-flow: column nowrap; }
     .search-bar { 
-        @include min-600px { order:2; }/* from 600 search-bar goes below explore btn */
-        @include min768px-max1200px { width:80%; margin:10px auto; }
-        @include min-1200px { width:95%; margin:35px auto; background-color: $lightgrey2; }
+        @include min-600px { 
+            /* from 600 search-bar goes below explore btn */
+            order:2; 
+            box-shadow: 0px 9px 9px #b3b3b3cf inset; 
+            padding: 5px 0; 
+        }
+        @include min768px-max1200px { /* width:80%; margin:10px auto; */ }
+        @include min-1200px { width:95%; margin:35px auto;
+            background-color: $lightgrey2;
+        }
         &__elements-container { 
             display:flex; flex-flow: row nowrap;  /* =====>>>>>>  */
             justify-content: center;
