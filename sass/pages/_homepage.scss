@@ -92,7 +92,7 @@ body { background-color: $lightgrey2; }
             padding: 5px 0; 
         }
         @include min768px-max1200px { /* width:80%; margin:10px auto; */ }
-        @include min-1200px { width:95%; margin:35px auto;
+        @include min-1200px { width:95%; margin:35px auto 0px auto;
             background-color: $lightgrey2;
         }
         &__elements-container { 
