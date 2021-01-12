@@ -143,7 +143,7 @@
         &__details { 
             @include flex-row-nowrap;
             justify-content: space-between;
-            @include min-600px { flex: auto;}
+            @include min-600px { flex: auto;} /* subtitle flows to end of line */
 
             h4:nth-child(1){ /* dish subtitle */
                 min-width: 0;

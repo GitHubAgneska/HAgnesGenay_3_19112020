@@ -1240,6 +1240,7 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  /* subtitle flows to end of line */
 }
 @media screen and (min-width: 600px) {
   .dish-card__txt__details {
