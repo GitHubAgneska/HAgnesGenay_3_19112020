@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "sass": "^1.30.0",
+    "scss": "^0.2.4"
+  },
+  "scripts": {
+    "scss": "sass --watch scss:css",
+    "prefix": "postcss ./css/ohmyfood-main.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "browserslist": "last 4 versions"
+}
